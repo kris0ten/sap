@@ -1,0 +1,1799 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 1524, 
+            "max" : [
+                791
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 792, 
+            "max" : [
+                0.7896934747695923, 
+                1.031478762626648, 
+                0.7903063297271729
+            ], 
+            "min" : [
+                -0.790306568145752, 
+                -0.8375582098960876, 
+                -0.7896937131881714
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 792, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 792, 
+            "max" : [
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                0.0, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }, 
+        {
+            "bufferView" : 4, 
+            "componentType" : 5123, 
+            "count" : 3048, 
+            "max" : [
+                1583
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 5, 
+            "componentType" : 5126, 
+            "count" : 1584, 
+            "max" : [
+                1.5796934366226196, 
+                1.0314780473709106, 
+                0.7903064489364624
+            ], 
+            "min" : [
+                -1.5803064107894897, 
+                -0.8375589847564697, 
+                -0.7896937131881714
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 6, 
+            "componentType" : 5126, 
+            "count" : 1584, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 7, 
+            "componentType" : 5126, 
+            "count" : 1584, 
+            "max" : [
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                0.0, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }, 
+        {
+            "bufferView" : 8, 
+            "componentType" : 5121, 
+            "count" : 36, 
+            "max" : [
+                23
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 9, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.7900000214576721, 
+                0.7900000214576721, 
+                0.7900000214576721
+            ], 
+            "min" : [
+                -0.7900000214576721, 
+                -0.7900000214576721, 
+                -0.7900000214576721
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 10, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 11, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.875, 
+                1.0
+            ], 
+            "min" : [
+                0.125, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }, 
+        {
+            "bufferView" : 12, 
+            "componentType" : 5121, 
+            "count" : 36, 
+            "max" : [
+                23
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 13, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.7900000214576721, 
+                0.39500001072883606, 
+                0.7900000214576721
+            ], 
+            "min" : [
+                -0.7900000214576721, 
+                -0.39500001072883606, 
+                -0.7900000214576721
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 14, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 15, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.875, 
+                1.0
+            ], 
+            "min" : [
+                0.125, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }, 
+        {
+            "bufferView" : 16, 
+            "componentType" : 5121, 
+            "count" : 36, 
+            "max" : [
+                23
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 17, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.7900000214576721, 
+                0.39500001072883606, 
+                0.7900000214576721
+            ], 
+            "min" : [
+                -0.7900000214576721, 
+                -0.39500001072883606, 
+                -0.7900000214576721
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 18, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 19, 
+            "componentType" : 5126, 
+            "count" : 24, 
+            "max" : [
+                0.875, 
+                1.0
+            ], 
+            "min" : [
+                0.125, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }, 
+        {
+            "bufferView" : 20, 
+            "componentType" : 5123, 
+            "count" : 780, 
+            "max" : [
+                407
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 21, 
+            "componentType" : 5126, 
+            "count" : 408, 
+            "max" : [
+                0.7902042865753174, 
+                0.6291993856430054, 
+                0.39500001072883606
+            ], 
+            "min" : [
+                -0.7897958755493164, 
+                -0.5109107494354248, 
+                -0.39500001072883606
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 22, 
+            "componentType" : 5126, 
+            "count" : 408, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -1.0
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 23, 
+            "componentType" : 5126, 
+            "count" : 408, 
+            "max" : [
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                0.0, 
+                0.0
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Soft8Soft Verge3D for Blender add-on", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 3048, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 9504, 
+            "byteOffset" : 3048, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 9504, 
+            "byteOffset" : 12552, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 6336, 
+            "byteOffset" : 22056, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 6096, 
+            "byteOffset" : 28392, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 19008, 
+            "byteOffset" : 34488, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 19008, 
+            "byteOffset" : 53496, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 12672, 
+            "byteOffset" : 72504, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 36, 
+            "byteOffset" : 85176, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 85212, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 85500, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 192, 
+            "byteOffset" : 85788, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 36, 
+            "byteOffset" : 85980, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 86016, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 86304, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 192, 
+            "byteOffset" : 86592, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 36, 
+            "byteOffset" : 86784, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 86820, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 288, 
+            "byteOffset" : 87108, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 192, 
+            "byteOffset" : 87396, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 1560, 
+            "byteOffset" : 87588, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4896, 
+            "byteOffset" : 89148, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4896, 
+            "byteOffset" : 94044, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 3264, 
+            "byteOffset" : 98940, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 102204, 
+            "uri" : "sneak_peek.bin"
+        }
+    ], 
+    "cameras" : [
+        {
+            "extensions" : {
+                "S8S_v3d_camera_data" : {
+                    "controls" : "ORBIT", 
+                    "enablePan" : true, 
+                    "moveSpeed" : 1.0, 
+                    "orbitMaxDistance" : 100.0, 
+                    "orbitMaxPolarAngle" : 3.1415927410125732, 
+                    "orbitMaxZoom" : 100.0, 
+                    "orbitMinDistance" : 0.0, 
+                    "orbitMinPolarAngle" : 0.0, 
+                    "orbitMinZoom" : 0.009999999776482582, 
+                    "orbitTarget" : [
+                        0.0, 
+                        0.0, 
+                        -0.0
+                    ], 
+                    "rotateSpeed" : 1.0, 
+                    "viewportFitInitialAspect" : 1.7777777777777777, 
+                    "viewportFitType" : "AUTO"
+                }
+            }, 
+            "name" : "Camera.001", 
+            "perspective" : {
+                "aspectRatio" : 1.7777777777777777, 
+                "yfov" : 0.39959648408210363, 
+                "zfar" : 100.0, 
+                "znear" : 0.10000000149011612
+            }, 
+            "type" : "perspective"
+        }
+    ], 
+    "extensionsUsed" : [
+        "S8S_v3d_texture_data", 
+        "S8S_v3d_material_data", 
+        "S8S_v3d_camera_data", 
+        "S8S_v3d_mesh_data", 
+        "S8S_v3d_node_data", 
+        "S8S_v3d_scene_data"
+    ], 
+    "images" : [
+        {
+            "uri" : "environment.hdr"
+        }
+    ], 
+    "materials" : [
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        1.0, 
+                                        1.0, 
+                                        1.0, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        1.0, 
+                                        0.20000000298023224, 
+                                        0.10000000149011612
+                                    ], 
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    1.399999976158142, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.029999999329447746, 
+                                    1.4500000476837158, 
+                                    0.0, 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    1.0, 
+                                    1.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Principled BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_PRINCIPLED_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Material"
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0.0, 
+                                        0.0002375125914113596, 
+                                        0.20000000298023224, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        1.0, 
+                                        0.20000000298023224, 
+                                        0.10000000149011612
+                                    ], 
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    1.399999976158142, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.029999999329447746, 
+                                    1.4500000476837158, 
+                                    0.0, 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    1.0, 
+                                    1.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Principled BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_PRINCIPLED_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Material.001"
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0.20000000298023224, 
+                                        0.0, 
+                                        0.0005771637079305947, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        1.0, 
+                                        0.20000000298023224, 
+                                        0.10000000149011612
+                                    ], 
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    1.399999976158142, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.029999999329447746, 
+                                    1.4500000476837158, 
+                                    0.0, 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    1.0, 
+                                    1.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Principled BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_PRINCIPLED_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Material.002"
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0.2947196364402771, 
+                                        0.30000001192092896, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        1.0, 
+                                        0.20000000298023224, 
+                                        0.10000000149011612
+                                    ], 
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    1.399999976158142, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.029999999329447746, 
+                                    1.4500000476837158, 
+                                    0.0, 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    1.0, 
+                                    1.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Principled BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_PRINCIPLED_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Material.003"
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        1.0, 
+                                        0.20000000298023224, 
+                                        0.10000000149011612
+                                    ], 
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    1.399999976158142, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.5, 
+                                    0.0, 
+                                    0.029999999329447746, 
+                                    1.4500000476837158, 
+                                    0.0, 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        1.0
+                                    ], 
+                                    1.0, 
+                                    1.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Principled BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_PRINCIPLED_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Material.004"
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "gtaoVisible" : true, 
+                    "materialIndex" : 0, 
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 0, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 1
+                            }, 
+                            {
+                                "fromNode" : 4, 
+                                "fromOutput" : 0, 
+                                "toInput" : 1, 
+                                "toNode" : 2
+                            }, 
+                            {
+                                "fromNode" : 3, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 2
+                            }, 
+                            {
+                                "fromNode" : 2, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 0
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0.05087608844041824, 
+                                        0.05087608844041824, 
+                                        0.05087608844041824, 
+                                        1.0
+                                    ], 
+                                    1.0
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Background", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BACKGROUND_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "World Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_WORLD_BL"
+                            }, 
+                            {
+                                "blendType" : "MIX", 
+                                "inputs" : [
+                                    0.5, 
+                                    [
+                                        0.5, 
+                                        0.5, 
+                                        0.5, 
+                                        1.0
+                                    ], 
+                                    [
+                                        0.05126946419477463, 
+                                        0.05126946419477463, 
+                                        0.05126946419477463, 
+                                        1.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Mix", 
+                                "outputs" : [
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "type" : "MIX_RGB_BL", 
+                                "useClamp" : false
+                            }, 
+                            {
+                                "inputs" : [], 
+                                "is_active_output" : false, 
+                                "name" : "Light Path", 
+                                "outputs" : [
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0, 
+                                    0.0
+                                ], 
+                                "type" : "LIGHT_PATH_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Environment Texture", 
+                                "outputs" : [
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "projection" : "EQUIRECTANGULAR", 
+                                "texture" : 0, 
+                                "type" : "TEX_ENVIRONMENT_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true
+                }
+            }, 
+            "name" : "Verge3D_Environment_World"
+        }, 
+        {
+            "emissiveFactor" : [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "extensions" : {
+                "S8S_v3d_material_data" : {
+                    "nodeGraph" : {
+                        "edges" : [
+                            {
+                                "fromNode" : 1, 
+                                "fromOutput" : 0, 
+                                "toInput" : 0, 
+                                "toNode" : 0
+                            }
+                        ], 
+                        "nodes" : [
+                            {
+                                "inputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ], 
+                                    0.0
+                                ], 
+                                "is_active_output" : true, 
+                                "name" : "Material Output", 
+                                "outputs" : [], 
+                                "type" : "OUTPUT_MATERIAL_BL"
+                            }, 
+                            {
+                                "inputs" : [
+                                    [
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        0.800000011920929, 
+                                        1.0
+                                    ], 
+                                    0.0, 
+                                    [
+                                        0.0, 
+                                        0.0, 
+                                        0.0
+                                    ]
+                                ], 
+                                "is_active_output" : false, 
+                                "name" : "Diffuse BSDF", 
+                                "outputs" : [
+                                    [
+                                        0, 
+                                        0, 
+                                        0, 
+                                        0
+                                    ]
+                                ], 
+                                "type" : "BSDF_DIFFUSE_BL"
+                            }
+                        ]
+                    }, 
+                    "useCastShadows" : true, 
+                    "useShadows" : true
+                }
+            }, 
+            "name" : "v3d_default_material"
+        }
+    ], 
+    "meshes" : [
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {
+                        "UVMap" : "TEXCOORD_0"
+                    }
+                }
+            }, 
+            "name" : "Cube.004", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0, 
+                    "material" : 2, 
+                    "mode" : 4
+                }
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {
+                        "UVMap" : "TEXCOORD_0"
+                    }
+                }
+            }, 
+            "name" : "Cube.006", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 6, 
+                        "POSITION" : 5, 
+                        "TEXCOORD_0" : 7
+                    }, 
+                    "indices" : 4, 
+                    "material" : 1, 
+                    "mode" : 4
+                }
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {
+                        "UVMap" : "TEXCOORD_0"
+                    }
+                }
+            }, 
+            "name" : "Cube.016", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 10, 
+                        "POSITION" : 9, 
+                        "TEXCOORD_0" : 11
+                    }, 
+                    "indices" : 8, 
+                    "material" : 0, 
+                    "mode" : 4
+                }
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {}
+                }
+            }, 
+            "name" : "Cube.018", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 14, 
+                        "POSITION" : 13, 
+                        "TEXCOORD_0" : 15
+                    }, 
+                    "indices" : 12, 
+                    "material" : 6, 
+                    "mode" : 4
+                }
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {
+                        "UVMap" : "TEXCOORD_0"
+                    }
+                }
+            }, 
+            "name" : "Cube.020", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 18, 
+                        "POSITION" : 17, 
+                        "TEXCOORD_0" : 19
+                    }, 
+                    "indices" : 16, 
+                    "material" : 4, 
+                    "mode" : 4
+                }
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_mesh_data" : {
+                    "colorLayers" : {}, 
+                    "uvLayers" : {
+                        "UVMap" : "TEXCOORD_0"
+                    }
+                }
+            }, 
+            "name" : "Cylinder.003", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 22, 
+                        "POSITION" : 21, 
+                        "TEXCOORD_0" : 23
+                    }, 
+                    "indices" : 20, 
+                    "material" : 3, 
+                    "mode" : 4
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Basic blocks"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 0, 
+            "name" : "Cube", 
+            "scale" : [
+                1.0, 
+                0.6100000143051147, 
+                1.0
+            ], 
+            "translation" : [
+                0.0, 
+                0.9042209982872009, 
+                -0.0
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Basic blocks"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 1, 
+            "name" : "Rectangle", 
+            "scale" : [
+                1.0, 
+                0.6100000143051147, 
+                1.0
+            ], 
+            "translation" : [
+                0.0, 
+                0.9042206406593323, 
+                -0.0
+            ]
+        }, 
+        {
+            "camera" : 0, 
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Collection"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        0.0, 
+                        0.0, 
+                        0.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0
+                }
+            }, 
+            "name" : "Camera", 
+            "rotation" : [
+                -0.20997294783592224, 
+                0.3857799768447876, 
+                0.09062846004962921, 
+                0.8937962055206299
+            ], 
+            "scale" : [
+                1.0, 
+                0.9999999403953552, 
+                0.9999998807907104
+            ], 
+            "translation" : [
+                34.815223693847656, 
+                22.954557418823242, 
+                32.127227783203125
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Basic blocks"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0
+                }
+            }, 
+            "name" : "Empty", 
+            "translation" : [
+                0.0, 
+                0.9042209982872009, 
+                -0.0
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Basic blocks"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 5, 
+            "name" : "Halfcube", 
+            "translation" : [
+                0.0, 
+                0.9042206406593323, 
+                -0.0
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Environment"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 2, 
+            "name" : "Spawn", 
+            "scale" : [
+                4.0, 
+                0.5, 
+                4.0
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Environment"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 4, 
+            "name" : "BaseBlack", 
+            "translation" : [
+                4.0, 
+                0.0, 
+                9.177091598510742
+            ]
+        }, 
+        {
+            "extensions" : {
+                "S8S_v3d_node_data" : {
+                    "frustumCulling" : true, 
+                    "groupNames" : [
+                        "Environment"
+                    ], 
+                    "hidden" : false, 
+                    "hidpiCompositing" : false, 
+                    "objectColor" : [
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "objectIndex" : 0, 
+                    "renderOrder" : 0, 
+                    "useShadows" : true
+                }
+            }, 
+            "mesh" : 3, 
+            "name" : "BaseWhite", 
+            "translation" : [
+                4.0, 
+                0.0, 
+                9.177091598510742
+            ]
+        }
+    ], 
+    "samplers" : [
+        {}
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "extensions" : {
+                "S8S_v3d_scene_data" : {
+                    "aaMethod" : "AUTO", 
+                    "iblEnvironmentMode" : "PMREM", 
+                    "physicallyCorrectLights" : true, 
+                    "pmremMaxTileSize" : 256, 
+                    "shadowMap" : {
+                        "esmDistanceScale" : 1.0, 
+                        "renderReverseSided" : false, 
+                        "renderSingleSided" : true, 
+                        "type" : "PCFPOISSON"
+                    }, 
+                    "worldMaterial" : 5
+                }
+            }, 
+            "extras" : {
+                "animFrameRate" : 24, 
+                "coordSystem" : "Z_UP_RIGHT"
+            }, 
+            "name" : "Scene", 
+            "nodes" : [
+                0, 
+                4, 
+                1, 
+                3, 
+                2, 
+                5, 
+                6, 
+                7
+            ]
+        }
+    ], 
+    "textures" : [
+        {
+            "extensions" : {
+                "S8S_v3d_texture_data" : {
+                    "colorSpace" : "linear"
+                }
+            }, 
+            "name" : "environment.hdr", 
+            "sampler" : 0, 
+            "source" : 0
+        }
+    ]
+}

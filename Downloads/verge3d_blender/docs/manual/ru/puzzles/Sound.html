@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Аудио и Видео Пазлы - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to load, play and manage audio and video using Verge3D Puzzles.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/puzzles/Sound.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Аудио и Видео Пазлы - Soft8Soft">
+            <meta property="og:description" content="How to load, play and manage audio and video using Verge3D Puzzles.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/puzzles/Sound.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Аудио и Видео Пазлы - Soft8Soft">
+            <meta name="twitter:description" content="How to load, play and manage audio and video using Verge3D Puzzles.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-load-sound.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-preload-init.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-preload-usage.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-load-sound-type.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-load-feature-available-init.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-load-feature-available-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-load-video.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-play.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-pause.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-stop.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-rewind.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-set-playback-time.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-get-playback-time.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-set-playback-rate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-set-volume.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-is-playing.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-mute.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-unmute.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-synth-sound.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-synth-sound-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-get-note-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-sound-get-drum-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Аудио и Видео Пазлы</h1>
+
+    <p>
+      Эти пазлы используются для загрузки и воспроизведения аудио и видеофайлов, а также для синтезации MIDI-звуков.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound.jpg">
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/puzzles/Sound.html#puzzles_reference">Перечень Пазлов</a><ul><li><a href="manual/ru/puzzles/Sound.html#load_sound">load sound</a></li><li><a href="manual/ru/puzzles/Sound.html#load_video">load video</a></li><li><a href="manual/ru/puzzles/Sound.html#play">play</a></li><li><a href="manual/ru/puzzles/Sound.html#pause">pause</a></li><li><a href="manual/ru/puzzles/Sound.html#stop">stop</a></li><li><a href="manual/ru/puzzles/Sound.html#rewind">rewind</a></li><li><a href="manual/ru/puzzles/Sound.html#set_playback_time">set playback time</a></li><li><a href="manual/ru/puzzles/Sound.html#get_playback_time">get playback time</a></li><li><a href="manual/ru/puzzles/Sound.html#set_playback_rate">set playback rate</a></li><li><a href="manual/ru/puzzles/Sound.html#set_volume">set volume</a></li><li><a href="manual/ru/puzzles/Sound.html#is_playing">is playing</a></li><li><a href="manual/ru/puzzles/Sound.html#mute">mute</a></li><li><a href="manual/ru/puzzles/Sound.html#unmute">unmute</a></li><li><a href="manual/ru/puzzles/Sound.html#synth_sound">synth sound</a></li><li><a href="manual/ru/puzzles/Sound.html#get_note_number">note number</a></li><li><a href="manual/ru/puzzles/Sound.html#get_drum_number">drum number</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Перечень Пазлов</h2>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#load_sound" id="load_sound" class="permalink">#</a></p>
+
+    <h3>load sound</h3>
+
+    <p>
+      Загружает аудиофайл по указанному URL. Аудио воспроизводится с помощью тега HTML5
+      Audio tag или WebAudio API в зависимости от выбранного типа: <b>music</b> или
+      <strong>sound</strong>/<strong>midi</strong> соответственно. Этот пазл также добавляет загруженное аудио в
+      кэш памяти, так что при последующем использовании этого пазла с тем же URL-адресом звуковой файл не требует повторной загрузки. Мы рекомендуем использовать формат <strong>.mp3</strong>, так как он поддерживается большинством веб-браузеров.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound-load-sound.jpg" style="max-width: 1000px">
+
+    <p id="load_sound_preloading"><b>preloading audio</b></p>
+    <p>
+      Загрузка аудиофайлов занимает некоторое время, поэтому они доступны не сразу.
+      Простое использование этого пазла внутри пазла
+      <a href="manual/ru/puzzles/Sound.html#play">play</a> может не сработать
+      и звук может не воспроизводиться.
+    </p>
+
+    <p>
+      Чтобы быть уверенным в том, что звук в вашем приложении работает правильно, рекомендуется загружать звуковые файлы заранее, например, во вкладке <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Tabs">init</a>, которая выполняется перед инициализацией приложения Verge3D. Вы также можете использовать пазл <a href="manual/ru/puzzles/Advanced.html#connector">connector</a>, чтобы организовать группу пазлов "load sound" более удобным способом:
+    </p>
+
+    <img class="centered" src="files/puzzles/puzzles-sound-preload-init.jpg" style="max-width: 1000px">
+    <span class="img-caption">Предварительная загрузка аудио во вкладке "init".</span>
+
+    <p>
+      После этого использование предварительно загруженных аудиофайлов в <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Tabs">main</a> или созданной пользователем вкладке не вызовет никаких проблем. Поскольку звук уже кэшируется после первого использования пазла "load sound", его не нужно загружать снова:
+    </p>
+
+    <img class="centered" src="files/puzzles/puzzles-sound-preload-usage.jpg" style="max-width: 1000px">
+    <span class="img-caption">Использование предварительно загруженного аудио на вкладке "main".</span>
+
+    <p><b>autoplay restrictions</b></p>
+    <p>
+      В целом, воспроизведение звука, инициированное программно (как в случае с пазлами), скорее всего, будет заблокировано браузером. Это происходит из-за политики автовоспроизведения, которая ограничивает автоматическое воспроизведение аудио на веб-странице. Цель таких ограничений - не дать веб-страницам издавать спонтанные звуки или воспроизводить аудио, когда это нежелательно, тем самым улучшая общий пользовательский опыт.
+    </p>
+
+    <p>
+      Хотя такая политика может быть реализована по-разному в различных браузерах, а также может иметь различные условия для разрешения/неразрешения автовоспроизведения, общее правило для воспроизведения аудио - ждать, пока пользователь взаимодействует с вашей веб-страницей.
+    </p>
+
+    <p>
+      Ограничения не накладываются, когда такое взаимодействие уже подразумевается логикой приложения, например, воспроизведение звука при нажатии (будь то 3d-объект или HTML-кнопка). Но, допустим, вы хотите, чтобы в вашем приложении была фоновая музыка, которая начинала бы играть при загрузке приложения. Поскольку это не всегда можно сделать автоматически, хорошим решением будет сделать кнопку "Пуск" для запуска приложения, когда оно загружено и готово. Нажатие на нее считается взаимодействием с пользователем и позволяет запустить воспроизведение аудио.
+    </p>
+
+    <p><b>"music", "sound", "midi" audio type</b></p>
+    <p>
+      Этот пазл позволяет выбрать, какой API использовать для загрузки и воспроизведения
+      аудиофайлов.
+      </p><ul>
+        <li>
+          <b>music</b> (по умолчанию, HTML5 Audio tag) - следует использовать большую часть
+          времени; лучше подходит для длинных аудиофайлов, например, фоновой музыки
+        </li>
+        <li>
+          <b>sound</b> (WebAudio API) - лучше подходит для коротких аудиофайлов, например
+          небольшие звуковые эффекты; рекомендуется использовать этот тип только в
+          следующих случаях:
+          <ul>
+              <li>
+                короткие, зацикленные (см. пазл <a href="manual/ru/puzzles/Sound.html#play">play</a> и его опцию <b>loop</b>) звуковые эффекты - "sound" делает зацикленное аудио бесшовным, в то время как с "music" у вас есть заметная задержка;
+              </li>
+              <li>
+                звуковые эффекты, которые должны воспроизводиться немедленно, например,
+                при взаимодействии с пользователем, в Safari воспроизводение идёт с задержкой - "sound" устраняет эту проблему.
+              </li>
+          </ul>
+        </li>
+        <li>
+          <b>midi</b> (WebAudio API + GM Synth) - особый тип <strong>sound</strong>, который используется для воспроизведения стандартных MIDI-файлов (с расширением <strong>*.mid</strong>). По сравнению с музыкой, хранящейся в <strong>*.mp3</strong>, MIDI-файлы действительно легкие и оказывают минимальное влияние на время загрузки приложения. Обратная сторона использования MIDI - несколько сниженное качество звуковой дорожки.
+        </li>
+      </ul>
+    <p></p>
+
+    <img src="files/puzzles/puzzles-sound-load-sound-type.jpg" style="max-width: 1000px">
+
+    <p class="note">
+      Web Audio API, который используется типами <b>sound</b> и <strong>midi</strong>, поддерживается в большинстве
+      современных браузеров. Однако, если вам нужно, чтобы аудио работало в браузерах
+      без поддержки Web Audio (например, Internet Explorer 11), вам придется использовать
+      тип <b>music</b>.
+      <br><br>
+
+      Если необходимо использовать тип <strong>sound</strong>/<strong>music</strong> в браузерах, где он доступен, и одновременно поддерживать Internet Explorer 11, то рекомендуемое решение - использовать пазл <a href="manual/ru/puzzles/System.html#feature_available">feature available</a> с выбранной опцией <b>Web Audio API</b>, чтобы проверить, доступен API или нет, и в зависимости от этого загрузить аудио с типом <b>music</b> или <b>sound</b>. Вы можете сделать это как для пазла <a href="manual/ru/puzzles/Sound.html#load_sound_preloading">preloading</a>, так и для воспроизведения аудио, как показано ниже:
+    </p>
+
+    <img class="centered" src="files/puzzles/puzzles-sound-load-feature-available-init.jpg" style="max-width: 1000px">
+    <span class="img-caption">Предварительная загрузка аудио во вкладке "init" с проверкой наличия Web Audio API.</span>
+
+    <img class="centered" src="files/puzzles/puzzles-sound-load-feature-available-main.jpg" style="max-width: 1000px">
+    <span class="img-caption">Использование предварительно загруженного аудио на вкладке "main" с проверкой наличия Web Audio API.</span>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#load_video" id="load_video" class="permalink">#</a></p>
+
+    <h3>load video</h3>
+
+    <p>
+      Создает <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">HTML5-видео</a> элемент и загружает звуковой файл по указанному URL. Этот пазл также добавляет созданный видеоэлемент в кэш памяти, чтобы при последующем использовании этого пазла с тем же URL не загружать тот же звуковой файл снова. Рекомендуется использовать формат <strong>.mp4</strong>, поскольку он поддерживается большинством веб-браузеров.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound-load-video.jpg">
+
+    <p>Пазл <strong>load video</strong> не создает никаких видимых элементов на сцене. Чтобы сделать его видимым, назначьте видеотекстуру материалам с помощью пазла <a href="manual/ru/puzzles/Materials.html#replace_texture">replace texture</a>.</p>
+
+
+    <!-- COMPAT: < 3.1.1 -->
+    <a href="#" id="play_sound"></a>
+
+    <p><a href="manual/ru/puzzles/Sound.html#play" id="play" class="permalink">#</a></p>
+
+    <h3>play</h3>
+
+    <p>Запускает воспроизведение аудио или видео. Флажок <strong>loop</strong> повторяет воспроизведение, если он включен.</p>
+
+    <img src="files/puzzles/puzzles-sound-play.jpg" style="max-width: 722px">
+
+    <p>Из-за ограничений браузера (не позволяющих вредоносным веб-сайтам воспроизводить шумные звуки и видео) вы не должны выполнять этот пазл для автоматического воспроизведения ваших ассетов (при загрузке сцены). Вместо этого, вы должны сделать это в каком-либо пользовательском событии. Используйте <a href="manual/ru/puzzles/Events.html#when_clicked">when clicked</a> или <a href="manual/ru/puzzles/HTML.html#event">event</a> для обработки таких событий.</p>
+
+    <p class="note">Из этого правила есть одно исключение. Браузеры позволяют автоматически воспроизводить видео с выключенным звуком. См. пазл <a href="manual/ru/puzzles/Sound.html#mute">mute</a> .</p>
+
+
+    <!-- COMPAT: < 3.1.1 -->
+    <a href="#" id="pause_sound"></a>
+
+    <p><a href="manual/ru/puzzles/Sound.html#pause" id="pause" class="permalink">#</a></p>
+
+    <h3>pause</h3>
+
+    <p>Приостанавливает воспроизведение аудио или видео.</p>
+
+    <img src="files/puzzles/puzzles-sound-pause.jpg" style="max-width: 459px">
+
+
+    <!-- COMPAT: < 3.1.1 -->
+    <a href="#" id="stop_sound"></a>
+
+    <p><a href="manual/ru/puzzles/Sound.html#stop" id="stop" class="permalink">#</a></p>
+
+    <h3>stop</h3>
+
+    <p>Останавливает воспроизведение аудио или видео. Использование этого пазла эквивалентно использованию пазла <a href="manual/ru/puzzles/Sound.html#pause">pause</a>, а за ним пазла <a href="manual/ru/puzzles/Sound.html#rewind">rewind</a>.</p>
+
+    <img src="files/puzzles/puzzles-sound-stop.jpg">
+
+
+    <!-- COMPAT: < 3.1.1 -->
+    <a href="#" id="rewind_sound"></a>
+
+    <p><a href="manual/ru/puzzles/Sound.html#rewind" id="rewind" class="permalink">#</a></p>
+
+    <h3>rewind</h3>
+
+    <p>Заставляет аудио или видео ассет воспроизводиться с самого начала.</p>
+
+    <img src="files/puzzles/puzzles-sound-rewind.jpg" style="max-width: 459px">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#set_playback_time" id="set_playback_time" class="permalink">#</a></p>
+
+    <h3>set playback time</h3>
+
+    <p>Установка текущего времени воспроизведения аудио/видео в секундах.</p>
+
+    <img src="files/puzzles/puzzles-sound-set-playback-time.jpg">
+
+    <p class="note">
+      Установка времени воспроизведения не поддерживается для ассетов <strong>sound</strong> (WebAudio).
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#get_playback_time" id="get_playback_time" class="permalink">#</a></p>
+
+    <h3>get playback time</h3>
+
+    <p>Получение текущего времени воспроизведения аудио/видео в секундах.</p>
+
+    <img src="files/puzzles/puzzles-sound-get-playback-time.jpg">
+
+    <p class="note">
+      Получение времени воспроизведения не поддерживается для ассетов <strong>sound</strong> (WebAudio).
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#set_playback_rate" id="set_playback_rate" class="permalink">#</a></p>
+
+    <h3>set playback rate</h3>
+
+    <p>Установка скорости воспроизведения аудио/видео. Укажите значение &lt;1 для замедления воспроизведения, 1 для нормальной скорости и &gt;1 для увеличения скорости воспроизведения.</p>
+
+    <img src="files/puzzles/puzzles-sound-set-playback-rate.jpg">
+
+    <p class="note">
+      Установка скорости воспроизведения не поддерживается для ассетов <strong>midi</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#set_volume" id="set_volume" class="permalink">#</a></p>
+
+    <h3>set volume</h3>
+
+    <p>Устанавливает громкость звука. Входная громкость устанавливается в диапазоне 0,0-1,0. Этот пазл также работает для видео со встроенной звуковой дорожкой.</p>
+
+    <img src="files/puzzles/puzzles-sound-set-volume.jpg" style="max-width: 700px">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#is_playing" id="is_playing" class="permalink">#</a></p>
+
+    <h3>is playing</h3>
+
+    <p>Проверяет, воспроизводится ли звук или видео.</p>
+
+    <img src="files/puzzles/puzzles-sound-is-playing.jpg" style="max-width: 595px">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#mute" id="mute" class="permalink">#</a></p>
+
+    <h3>mute</h3>
+
+    <p>Отключает звук или видео.</p>
+
+    <p>Помимо управления громкостью звука, вы можете использовать этот пазл для автоматического запуска воспроизведения видео. Это возможно, поскольку веб-браузеры позволяют воспроизводить видео с выключенным звуком без участия пользователя.</p>
+
+    <img src="files/puzzles/puzzles-sound-mute.jpg" style="max-width: 557px">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#unmute" id="unmute" class="permalink">#</a></p>
+
+    <h3>unmute</h3>
+
+    <p>Включение звука или видео.</p>
+
+    <img src="files/puzzles/puzzles-sound-unmute.jpg" style="max-width: 511px">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#synth_sound" id="synth_sound" class="permalink">#</a></p>
+
+    <h3>synth sound</h3>
+
+    <p>
+      Воспроизведение звука с помощью встроенного <em>General MIDI</em>-совместимого программного синтезатора (на основе <a href="https://github.com/g200kg/webaudio-tinysynth" target="_blank">библиотеки TinySynth</a>). Поддерживаются различные инструменты и эффекты.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound-synth-sound.jpg">
+
+    <dl>
+      <dt>note on</dt>
+      <dd>Начать воспроизведение <strong>note</strong> (ноты) с помощью заданного <strong>channel</strong> (канала) синтезатора с интенсивностью звука, указанной как <strong>velocity</strong> (скорость) (0-127). Используйте значение <strong>at time</strong> для указания времени начала воспроизведения в секундах.</dd>
+
+      <dt>note off</dt>
+      <dd>Останавливает воспроизведение заданной <strong>note</strong> (ноты).</dd>
+
+      <dt>set instrument</dt>
+      <dd>Установить инструмент канала из заданного списка.</dd>
+
+      <dt>set volume</dt>
+      <dd>Установить громкость канала.</dd>
+
+      <dt>set pan</dt>
+      <dd>Установить уровень pan канала.</dd>
+
+      <dt>stop sounds</dt>
+      <dd>Остановить все звуки в выбранном канале.</dd>
+    </dl>
+
+    <p>
+      Чтобы воспроизвести ударные, укажите <strong>Drums</strong> в качестве номера канала и используйте <a href="manual/ru/puzzles/Sound.html#get_drum_number">drum number</a> для выбора инструмента.
+    </p>
+
+    <p>Пример</p>
+
+    <img src="files/puzzles/puzzles-sound-synth-sound-example.jpg">
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#get_note_number" id="get_note_number" class="permalink">#</a></p>
+
+    <h3>note number</h3>
+
+    <p>
+      Задает номер ноты. Используется для передачи нот в канал <strong>1</strong>-<strong>9</strong> пазла <a href="manual/ru/puzzles/Sound.html#synth_sound">synth sound</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound-get-note-number.jpg">
+
+    <p>
+      Номера октав указываются с помощью <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation" target="_blank">scientific pitch notation</a>, например, <em>C 4</em> означает <em>средний тон C</em>.
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Sound.html#get_drum_number" id="get_drum_number" class="permalink">#</a></p>
+
+    <h3>drum number</h3>
+
+    <p>
+      Задает номер ударных. Используйте его для передачи нот в канал <strong>Drums</strong> пазла <a href="manual/ru/puzzles/Sound.html#synth_sound">synth sound</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-sound-get-drum-number.jpg">
+
+
+
+    <h2>Проблема с Пазлами?</h2>
+
+    <p>Обращайтесь за помощью на наш <a href="https://www.soft8soft.com/forums/" target="_blank">форум</a>!</p>
+
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <div class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">Soft8Soft – трёхмерные решения для сайтов</a><div>Последнее обновление: 28 марта 2022 г.</div></div></body></html>

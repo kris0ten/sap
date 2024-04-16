@@ -1,0 +1,851 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Пазлы HTML - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to use Verge3D Puzzles to manipulate HTML DOM elements.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/puzzles/HTML.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Пазлы HTML - Soft8Soft">
+            <meta property="og:description" content="How to use Verge3D Puzzles to manipulate HTML DOM elements.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/puzzles/HTML.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Пазлы HTML - Soft8Soft">
+            <meta name="twitter:description" content="How to use Verge3D Puzzles to manipulate HTML DOM elements.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-add-html-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-remove-html-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-attr.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-attr.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-css-rule.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-style.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-style.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-style-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-css-rule.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-on-event.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-event-property.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-DOM-object-selector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-query-selector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-canvas-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-canvas-elem-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-draw-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-remove-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-bind-element.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-init-fullscreen.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-open-web-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-social-share-link.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-url-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-url-param-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-take-screenshot.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-url-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-url-data-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-download-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-download-file-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-open-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-drop-file-to.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/data-url-logo.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/data-url-debugging.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Пазлы HTML</h1>
+
+    <p>Эти пазлы управляют элементами HTML DOM.</p>
+
+    <img src="files/puzzles/puzzles-html.jpg">
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/puzzles/HTML.html#what_is_html_dom">Что такое HTML DOM?</a></li><li><a href="manual/ru/puzzles/HTML.html#puzzles_reference">Перечень Пазлов</a><ul><li><a href="manual/ru/puzzles/HTML.html#add_HTML_element">add HTML element</a></li><li><a href="manual/ru/puzzles/HTML.html#remove_html_element">remove HTML element</a></li><li><a href="manual/ru/puzzles/HTML.html#get_attribute">get attribute</a></li><li><a href="manual/ru/puzzles/HTML.html#set_attribute">set attribute</a></li><li><a href="manual/ru/puzzles/HTML.html#create_css_rule">create css rule</a></li><li><a href="manual/ru/puzzles/HTML.html#set_style">set style</a></li><li><a href="manual/ru/puzzles/HTML.html#get_style">get style</a></li><li><a href="manual/ru/puzzles/HTML.html#set_css_rule">set css rule</a></li><li><a href="manual/ru/puzzles/HTML.html#event">event</a></li><li><a href="manual/ru/puzzles/HTML.html#get_event_property">get event property</a></li><li><a href="manual/ru/puzzles/HTML.html#query_selector">query selector</a></li><li><a href="manual/ru/puzzles/HTML.html#create_canvas_elem">create canvas elem</a></li><li><a href="manual/ru/puzzles/HTML.html#draw_line">draw line</a></li><li><a href="manual/ru/puzzles/HTML.html#remove_line">remove line</a></li><li><a href="manual/ru/puzzles/HTML.html#bind_element">bind element</a></li><li><a href="manual/ru/puzzles/HTML.html#init_fullscreen">init fullscreen</a></li><li><a href="manual/ru/puzzles/HTML.html#open_web_page">open web page</a></li><li><a href="manual/ru/puzzles/HTML.html#social_share_link">social share link</a></li><li><a href="manual/ru/puzzles/HTML.html#set_url_param">set URL param</a></li><li><a href="manual/ru/puzzles/HTML.html#take_screenshot">take screenshot</a></li><li><a href="manual/ru/puzzles/HTML.html#get_url_data">get URL data</a></li><li><a href="manual/ru/puzzles/HTML.html#download_file">download file</a></li><li><a href="manual/ru/puzzles/HTML.html#open_file">open file and opened file</a></li><li><a href="manual/ru/puzzles/HTML.html#drop_file_to">drop file to</a></li></ul></li><li><a href="manual/ru/puzzles/HTML.html#data_uri">Data URI Links</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#what_is_html_dom" id="what_is_html_dom" class="permalink">#</a></p>
+
+    <h2>Что такое HTML DOM?</h2>
+
+    <p>
+      HTML DOM (Document Object Model, смотрите техническую документацию <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">здесь</a>) - это программный интерфейс к HTML-странице. Он позволяет вам изменять свое приложение не только путем редактирования его кода, но и путем выполнения различных пазлов. Например, вы можете добавлять новые элементы HTML, настраивать внешний вид страницы, рисовать что-то поверх ваших моделей, делать снимки экрана, загружать файлы и т.д.
+    </p>
+
+    <p><a href="manual/ru/puzzles/HTML.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Перечень Пазлов</h2>
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#add_HTML_element" id="add_HTML_element" class="permalink">#</a></p>
+
+    <h3>add HTML element</h3>
+
+    <p>
+      Создает элемент HTML с указанным <a href="https://www.w3schools.com/tags/default.asp" target="_blank">типом</a> и идентификатором (соответствует атрибуту "id") и добавляет его непосредственно перед или сразу после указанного существующего элемента HTML.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-add-html-elem.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#remove_html_element" id="remove_html_element" class="permalink">#</a></p>
+
+    <h3>remove HTML element</h3>
+
+    <p>
+      Удаляет элемент HTML с указанным идентификатором.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-remove-html-elem.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#get_attribute" id="get_attribute" class="permalink">#</a></p>
+
+    <h3>get attribute</h3>
+
+    <p>
+      Получает <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">атрибут</a> из HTML-элемента с заданным id. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> файл приложения Verge3D внедрен с помощью <strong>iframe</strong>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-get-attr.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#set_attribute" id="set_attribute" class="permalink">#</a></p>
+
+    <h3>set attribute</h3>
+
+    <p>
+      Устанавливает <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">атрибут</a> для HTML-элемента с указанным id. Флажок "in parent doc"  должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> файл приложения Verge3D внедрен с помощью <strong>.iframe</strong>). Также работает со списками идентификаторов элементов.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-set-attr.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#create_css_rule" id="create_css_rule" class="permalink">#</a></p>
+
+    <h3>create css rule</h3>
+
+    <p>
+      Создает новое <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank">правило CSS</a>. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> файл приложения Verge3D внедрен с помощью <strong>.iframe</strong>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-create-css-rule.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#set_style" id="set_style" class="permalink">#</a></p>
+
+    <h3>set style</h3>
+
+    <p>
+      Устанавливает <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS-свойство</a> для HTML-элемента с указанным id. Флажок "in parent doc"  должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> файл приложения Verge3D внедрен с помощью <strong>.iframe</strong>). Также работает со списками идентификаторов элементов.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-set-style.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#get_style" id="get_style" class="permalink">#</a></p>
+
+    <h3>get style</h3>
+
+    <p>
+      Берет <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS свойство</a> из HTML-элемента с указанным id. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> приложения Verge3D внедрен с помощью <strong>iframe</strong>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-get-style.jpg">
+
+    <p>
+      Этот пазл может быть очень полезен для создания 3D-конфигураторов. Например, вы можете использовать следующую настройку для назначения цвета материала из цвета фона элемента HTML:
+    </p>
+
+    <img src="files/puzzles/puzzles-html-get-style-example.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#set_css_rule" id="set_css_rule" class="permalink">#</a></p>
+
+    <h3>set css rule</h3>
+
+    <p>
+      Устанавливает <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS свойство</a> для указанного правила CSS (находится в <strong>.css</strong> файлах приложения). Флажок "in parent doc" должен быть установлен, если таблицы стилей принадлежат внешнему HTML-документу (в который  <strong>.html</strong> приложения Verge3D внедрен с помощью <strong>iframe</strong>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-set-css-rule.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#event" id="event" class="permalink">#</a></p>
+
+    <h3>event</h3>
+
+    <p>
+      Регистрирует <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">event listener</a> для HTML-элемента с указанным id. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> приложения Verge3D встроен с помощью <strong>iframe</strong>). Как только происходит событие, срабатывают пазлы, помещенные в слот "do". Также работает со списками идентификаторов элементов.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-on-event.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#get_event_property" id="get_event_property" class="permalink">#</a></p>
+
+    <h3>get event property</h3>
+
+    <p>
+      Выводит значение <a href="https://www.w3schools.com/jsref/obj_events.asp" target="_blank">свойства</a> события, сгенерированного пазлом "event".
+    </p>
+
+    <img src="files/puzzles/puzzles-html-get-event-property.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#DOM_object_selector" id="DOM_object_selector" class="permalink">#</a></p>
+
+    <!--COMPAT-->
+    <p><a href="manual/ru/puzzles/HTML.html#window" id="window" class="permalink"></a></p>
+    <p><a href="manual/ru/puzzles/HTML.html#document" id="document" class="permalink"></a></p>
+    <p><a href="manual/ru/puzzles/HTML.html#body" id="body" class="permalink"></a></p>
+
+    <h3>DOM object selector</h3>
+
+    <p>
+      Представляет элемент контейнера canvas - элемент HTML, который содержит визуализированную сцену, <a href="https://www.w3schools.com/jsref/obj_window.asp" target="_blank">DOM window object</a> - вкладку браузера или iframe, в который загружается HTML-документ, <a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank">DOM document object</a> - корневой узел HTML-документа, или <a href="https://www.w3schools.com/jsref/dom_obj_body.asp" target="_blank">DOM body object</a> - элемент &lt;body&gt; HTML-документа.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-DOM-object-selector.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#query_selector" id="query_selector" class="permalink">#</a></p>
+
+    <h3>query selector</h3>
+
+    <p>
+      Возвращает первый элемент HTML, который соответствует заданному <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">селектору CSS</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-query-selector.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#create_canvas_elem" id="create_canvas_elem" class="permalink">#</a></p>
+
+    <h3>create canvas elem</h3>
+
+    <p>
+      Создает элемент canvas с атрибутами <strong>id</strong>, <strong>width</strong> и <strong>height</strong>. Используйте этот пазл вместе с <a href="manual/ru/puzzles/Materials.html#replace_texture">replace texture</a> для создания текстур холста.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-create-canvas-elem.jpg">
+
+    <p>
+      После создания, холст становится доступным для рисования на нем с помощью JavaScript. Вы можете обновить холст внутри функции <em>runCode()</em> модуля <em>your_app_name.js</em> или с помощью пазла <a href="manual/ru/puzzles/Advanced.html#exec_script">exec script</a>.
+    </p>
+
+    <p>
+      Чтобы обновить холст, получите текстуру холста по ее ID (указанному как атрибут <strong>id</strong>):
+    </p>
+
+    <code>
+    var canvasTex = v3d.puzzles.canvasTextures['my_canvas'];
+    </code>
+
+    <p>После этого вы можете получить доступ к элементу HTML canvas следующим образом:</p>
+
+    <code>
+    var canvas = canvasTex.image;
+    </code>
+
+    <p>Вы можете использовать стандартные методы, доступные для рисования на холсте HTML. В примере ниже, на белом фоне нарисовано синее улыбающееся лицо:</p>
+
+    <code>
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'blue';
+
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.stroke();
+
+    </code>
+
+    <p>Наконец, если вы хотите, чтобы обновления в 3D-рендеринге были видны сразу, вам следует пометить текстуру холста как динамическую:</p>
+
+    <code>
+    canvasTex.needsUpdate = true;
+    </code>
+
+    <img src="files/puzzles/puzzles-html-create-canvas-elem-example.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#draw_line" id="draw_line" class="permalink">#</a></p>
+
+    <h3>draw line</h3>
+
+    <p>
+      Соединяет указанный 3D-объект с указанным HTML-элементом динамически обновляемой линией. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> приложения Verge3D встроен с помощью <strong>iframe</strong>). Вы также можете задать ширину, цвет и смещение для линии.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-draw-line.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#remove_line" id="remove_line" class="permalink">#</a></p>
+
+    <h3>remove line</h3>
+
+    <p>
+      Удаляет ранее созданную линию из указанного объекта.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-remove-line.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#bind_element" id="bind_element" class="permalink">#</a></p>
+
+    <h3>bind element</h3>
+
+    <p>
+      Заставляет указанный HTML-элемент следовать за центром указанного 3D-объекта в пространстве экрана. Флажок "in parent doc" должен быть установлен, если HTML-элемент находится во внешнем HTML-документе (в который <strong>.html</strong> приложения Verge3D встроен с помощью <strong>iframe</strong>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-bind-element.jpg">
+
+    <p>
+    <strong>Notes</strong>:
+    </p>
+
+    <p>
+      Вместо этого можно использовать пазл <a href="manual/ru/puzzles/Objects.html#add_annotation">add annotation</a> и настроить внешний вид аннотаций, как описано <a href="manual/ru/introduction/Styling-Verge3D-Apps.html#Annotations" target="_parent">здесь</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#init_fullscreen" id="init_fullscreen" class="permalink">#</a></p>
+
+    <h3>init fullscreen</h3>
+
+    <p>
+      Заставляет указанный HTML-элемент вести себя как кнопка полноэкранного режима - первый щелчок по ней вызывает вход в полноэкранный режим, второй - выход из него. Пазлы, размещенные в слотах "on enter do" и "on exit do", срабатывают при входе или выходе из полноэкранного режима. Пазлы, размещенные в слоте "if unavailable do", срабатывают, если полноэкранный режим не поддерживается браузером (например, iOS Safari).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-init-fullscreen.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#open_web_page" id="open_web_page" class="permalink">#</a></p>
+
+    <h3>open web page</h3>
+
+    <p>
+      При срабатывании этого пазла указанный URL открывается в новой или в той же вкладке браузера в зависимости от выпадающего выбора. При запуске из редактора пазлов он запросит подтверждение пользователя, прежде чем покинуть вкладку.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-open-web-page.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#social_share_link" id="social_share_link" class="permalink">#</a></p>
+
+    <h3>social share link</h3>
+
+    <p>
+      Генерирует ссылку для обмена вашим приложением в популярных социальных сетях.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-social-share-link.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#set_url_param" id="set_url_param" class="permalink">#</a></p>
+
+    <h3>set URL param</h3>
+
+    <p>
+      Присваивает или обновляет значение параметра в указанном URL, при необходимости автоматически формируя допустимую <a href="https://en.wikipedia.org/wiki/Query_string" target="_blank">строку запроса</a>, и возвращает обновленный URL.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-set-url-param.jpg">
+
+    <p>
+      Этот пазл может быть полезен в ситуациях, когда данные конфигурации приложения хранятся в его URL. Например, вы можете указать изображение, которое будет использоваться в качестве текстуры, следующим образом:
+    </p>
+
+    <pre class="prettyprint"><code class="language-html">
+    https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg
+    </code></pre>
+
+    <p>
+      Вы можете загрузить текстуру, получить путь к ней на стороне сервера и сохранить ее в параметре <strong>image_url</strong> URL-адреса приложения следующим образом:
+    </p>
+
+    <img src="files/puzzles/puzzles-html-set-url-param-example.jpg">
+
+    <p>
+      Рабочий пример смотрите в демо <strong>Custom Image</strong> в дистрибутиве Verge3D.
+    </p>
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#take_screenshot" id="take_screenshot" class="permalink">#</a></p>
+
+    <h3>take screenshot</h3>
+
+    <p>
+      Делает снимок экрана области просмотра и выводит его в формате <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-take-screenshot.jpg">
+
+    <p>
+    <strong>Notes</strong>:
+    </p>
+
+    <p>
+      Вы также должны включить скриншоты для вашего приложения с помощью пазла <a href="manual/ru/puzzles/Initialization.html#configure_application">configure application</a>, иначе создаваемые изображения будут совершенно черными.
+    </p>
+
+
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#get_url_data" id="get_url_data" class="permalink">#</a></p>
+
+    <h3>get URL data</h3>
+
+    <p>
+      Извлекает данные URL окна, в которое загружено приложение:
+    </p>
+
+    <p>
+    </p><ul>
+    <li>
+    <strong>Entire URL</strong> - текст, например "https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg"
+    </li>
+    <li>
+    <strong>Parameters</strong> - словарь, например {"image_url": "https://www.uploadserver.com/path/to/image.jpg"}
+    </li>
+    <li>
+    <strong>Host name</strong> - текст, например "www.example.com"
+    </li>
+    </ul>
+    Флажок "in parent doc" должен быть установлен, если требуется окно внешнего HTML-документа (в который с помощью <strong>iframe</strong> встроен <strong>.html</strong> приложения Verge3D).
+    <p></p>
+
+    <img src="files/puzzles/puzzles-html-get-url-data.jpg">
+
+    <p>
+      Этот пазл может быть полезен в ситуациях, когда данные конфигурации приложения хранятся в его URL. Например, вы можете указать изображение, которое будет использоваться в качестве текстуры, следующим образом:
+    </p>
+
+    <pre class="prettyprint"><code class="language-html">
+    https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg
+    </code></pre>
+
+    <p>
+      Затем вы можете получить параметр <strong>image_url</strong>, загрузить и применить текстуру следующим образом:
+    </p>
+
+    <img src="files/puzzles/puzzles-html-get-url-data-example.jpg">
+
+    <p>
+      Рабочий пример смотрите в демо <strong>Custom Image</strong> в дистрибутиве Verge3D.
+    </p>
+
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#download_file" id="download_file" class="permalink">#</a></p>
+
+    <h3>download file</h3>
+
+    <p>
+      Загружает содержимое, указанное в формате <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a>, в файл. Вы также можете передать текст, <a href="manual/ru/puzzles/Dictionaries.html">словарь</a> или <a href="manual/ru/puzzles/Lists.html">список</a> данных для загрузки в текстовый или JSON файл. В этом случае заданный объект будет автоматически преобразован в соответствующий Data URI.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-download-file.jpg">
+
+    <p>
+      Примеры использования данного пазла:
+    </p>
+
+    <ul>
+      <li>для сохранения ранее сделанных скриншотов</li>
+      <li>для сохранения состояния приложения путем сохранения словаря (или списка) в файле <strong>*.json</strong></li>
+      <li>экспортировать модели в формате glTF для дальнейшей обработки</li>
+      <li>для создания текстовой информации о ценах, котировок, отчетов и т.д.</li>
+    </ul>
+
+    <img src="files/puzzles/puzzles-html-download-file-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#open_file" id="open_file" class="permalink">#</a></p>
+
+    <h3>open file and opened file</h3>
+
+    <p>
+      Вызывает встроенное диалоговое окно браузера для выбора файлов с устройства пользователя. После того как пользователь выбрал файл, возвращает содержимое файла в формате <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-html-open-file.jpg">
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#drop_file_to" id="drop_file_to" class="permalink">#</a></p>
+
+    <h3>drop file to</h3>
+
+    <p>
+      Возвращает файл, перенесенный из файлового менеджера (или другой программы) и помещенный на заданный элемент HTML внутри окна браузера. После того, как пользователь перетащил файл, возвращает его содержимое в виде пазла <a href="manual/ru/puzzles/HTML.html#open_file">opened file</a> (используя формат <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a>).
+    </p>
+
+    <img src="files/puzzles/puzzles-html-drop-file-to.jpg">
+
+    <p>
+      Вы можете активировать дополнительный слот <strong>drag over</strong> для обработки событий перемещения файлов. Например, вы можете использовать его вместе с пазлом <a href="manual/ru/puzzles/Scenes.html#raycast">raycast</a> для выделения объектов курсором/касанием.
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/HTML.html#data_uri" id="data_uri" class="permalink">#</a></p>
+
+    <h2>Data URI Links</h2>
+
+    <p>
+      Data URI (или Data URL) - это удобный метод встраивания различных ассетов, таких как изображения, модели glTF, звуки, JSON или CSV, внутрь ссылок (<a href="https://en.wikipedia.org/wiki/Data_URI_scheme" target="_blank">techie stuff</a>).
+    </p>
+
+    <p>
+      Например, следующая ссылка представляет собой маленький логотип Verge3D:
+    </p>
+
+    <code class="language-html">
+data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABvFBMVEUAAAAASKUAAFsAvukA
+RaMA3voAAEoARaQARKMARqQARqQARKMARaQARqQAQ6IATagCcLwCcbwATagARqQASaYARqQASKUC
+argASKUARqQASqYASKUAR6QAT6kAT6kAR6QAR6UASaUASaUAR6UARKMBWq8BWq8ARKMAQqECaLcC
+abgAQqEAQaECbboCbroAQaECbrsCbroCabcCa7kCb7sCbrsARaQARaQElNAEldEGrd4GseEDg8cD
+hcgGtOIGrt8Eks8I1/cFqNwBUqsAQ6IBVKwGrN4Ekc8El9IJ5/8HvOcBU6sASqYDdb8CdL4ASaYB
+VawHv+gJ5/4EltII0PIJ4PsCc70ARqQEjs0J4vwJ4fsEi8sARaMDdr8J4fwI0fIJ3/sGuuYATKcC
+ZbYI1fUHyfMHyPMI0/QCYrQATagHvecJ4PwEj80ARKMFnNQHyvMBU8IBUsEFmNII3PkHwuoIyvQH
+vugAS6cDecEI1/YCbrsBWK4I0vMJ5v8HyPIIz/ICcr0I2PcIz/EDgMUBXrEJ6P8I1vYBW7ADhMcC
+cb0Hv+kFmNMEkM4GueUJ4PoJ3/oJ3voI3foEltH///+98SuhAAAAOHRSTlMAAAAAAAAAJJPu8Jgn
+EWjT/v7VEAVLvvq8RwQFe/LweDXn6DdT9/hXWvn6XVv5+lz6+fn6/v7w7sPq7QcAAAABYktHRJPh
+A9+2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QsCEC4OPIwcRgAAAQpJREFUGNNjYGBg
+YGRi5+Dk4uZhZmQAAUYWXj5+AQtLQSE+YRagEKOIqJi4lbWNrZ29uISkFCODtIysg6OTs4uLq5uj
+u5y8NIOCooenl7ePr59/QGBQsJIyg4pqSGhYeERkVHRMbFy8mjqDhmZCYlJySmpaekZmVoKWNoOO
+bnZObl5+QWFqUa5DnJ4+g75BsW9SSWlBQX5ZeUWxoQ6DtnhlVXVNbVpdbX1AQ6ORBoO6WlNzS6Nn
+a6tnW3tHk6oKg7JSkVdYpWdtrWdKZ1e3ogKDtLxcT28fSKA/0UFWRpqBUUpSwth+QmvrRHtjMVER
+kGdYhPmETCZZmvLz8bJA/cvKw21mzsHOBuICAHx4PYwwa1fDAAAAJXRFWHRkYXRlOmNyZWF0ZQAy
+MDE3LTExLTAyVDE2OjQ2OjE0KzAxOjAwKvGBdAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0xMS0w
+MlQxNjo0NjoxNCswMTowMFusOcgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+AAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMj
+E0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC
+    </code>
+
+    <p>
+      Скопируйте весь фрагмент и вставьте в адресную строку браузера, чтобы отобразить логотип:
+    </p>
+
+    <img src="files/puzzles/data-url-logo.jpg">
+
+    <p>
+      В пазлах мы широко используем ссылки Data URI, поскольку они обеспечивают удобный способ передачи файлоподобных данных между различными блоками пазлов. Например, вы можете использовать пазлы <a href="manual/ru/puzzles/HTML.html#open_file">open file</a> или <a href="manual/ru/puzzles/HTML.html#drop_file_to">drop file to</a>, чтобы загрузить какой-либо файл (изображение или данные). Затем вы можете внести изменения в вашу сцену в соответствии с этим файлом. После этого вы можете загрузить измененную сцену (или, возможно, некоторые данные, например, документ прайс-листа) обратно на устройство пользователя с помощью <a href="manual/ru/puzzles/HTML.html#download_file">download file</a>, или загрузить этот файл на сервер с помощью пазла <a href="manual/ru/puzzles/Advanced.html#send_data">send data</a>. Во всех этих случаях данные будут передаваться с использованием формата Data URI.
+    </p>
+
+    <p class="note">
+      Ознакомьтесь с демо сценой Custom Image внутри дистрибутива Verge3D в качестве примера использования пазлов Data URI.
+    </p>
+
+    <p>
+      Также довольно легко отлаживать данные в формате Data URI. Просто используйте пазл <a href="manual/ru/puzzles/System.html#print_to_console">print to console</a>, затем откройте <a href="manual/ru/introduction/FAQ.html#browser_console">консоль браузера</a>, чтобы просмотреть вывод, а затем щелкните на напечатанном URI внутри консоли, чтобы просмотреть данные в отдельной вкладке браузера.
+    </p>
+
+    <img src="files/puzzles/data-url-debugging.jpg">
+
+
+    <h2>Проблема с Пазлами?</h2>
+
+    <p>Обратитесь за помощью на наш <a href="https://www.soft8soft.com/forums/" target="_blank">форум</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <div class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">Soft8Soft – трёхмерные решения для сайтов</a><div>Последнее обновление: 28 марта 2022 г.</div></div></body></html>

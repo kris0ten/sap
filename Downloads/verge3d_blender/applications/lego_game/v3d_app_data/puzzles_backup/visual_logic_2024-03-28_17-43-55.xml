@@ -1,0 +1,417 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="590" scrolly="309.49999999999994" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="1676" scrolly="-134" scale="1">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="Z]|IZUma8Mo~2;~4L7:i" type="">newpiece</variable>
+      <variable id="}5_M]g.OtiKy8QXR`,m," type="">i</variable>
+      <variable id="Qpk{!(%rMClnVkBaE(57" type="">j</variable>
+      <variable id="=Gu6yP5HWhp[6hC^$0S]" type="">k</variable>
+      <variable id="oM3tTn_k`+h.NXLh)w`t" type="">list1</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="0#^O$?u%TQm/p0}TVj{K" x="-1930" y="-490">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Itb*3Q4=h;w^d2P;~?:W">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="$:C}m]Q6@Kk$qCazt.H%" x="-1450" y="-510">
+      <value name="VALUE">
+        <shadow type="objectList" id="##66VZYl_8JcysQg.^a;">
+          <field name="FIELDNAME">Rectangle</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="hide" id=":LBE_M@}^pNEf{mG)d/_">
+          <value name="VALUE">
+            <shadow type="objectList" id="j:K_,+{}LYM1$GQ26{)z">
+              <field name="FIELDNAME">Halfcube</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="hide" id="K)SsU`u*.8Xft#XZ@-pO">
+              <value name="VALUE">
+                <shadow type="objectList" id="SAWb#+Q--.kid,Dz3%Mz">
+                  <field name="FIELDNAME">Cube</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="variables_set" id="CJUv!~=BGm_9q/-${B-9">
+                  <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                  <value name="VALUE">
+                    <block type="lists_create_empty" id="66Qzpbd-H=QdFzUM=pDG"/>
+                  </value>
+                  <next>
+                    <block type="eventHTMLElem" id="XeT2;uqaH{,C/Q?YL9BQ">
+                      <field name="EVENT">click</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="ID">
+                        <shadow type="text" id="SBfh$j=h3[9U@Z!o`W4.">
+                          <field name="TEXT">piece1</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="lists_setIndex" id="f%,;Yk}=axCle[$/*LQy">
+                          <mutation at="false"/>
+                          <field name="MODE">INSERT</field>
+                          <field name="WHERE">LAST</field>
+                          <value name="LIST">
+                            <block type="variables_get" id="|}DPNXJ;%6jz#VSz[JkH">
+                              <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="variables_get" id="X1DQ;}!yl:gKTsH!#Zm+">
+                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="setObjTransform" id="x@Shy{ytjQ7J2Mb+/8;A">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="OFFSET">TRUE</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList">
+                                  <field name="FIELDNAME">Building plane.001</field>
+                                </shadow>
+                                <block type="cloneObject" id="7d?~wrVP%5gPaaidh**h">
+                                  <value name="OBJECTINPUT">
+                                    <shadow type="objectList" id="p)587==94;YYXJ@M46C(">
+                                      <field name="FIELDNAME">Halfcube</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="show" id="(Sbi~QB8+|q?FA4A!ozV">
+                                  <value name="VALUE">
+                                    <shadow type="objectList" id="VYF(n$L6lu3CBbYgybl2">
+                                      <field name="FIELDNAME">Two stud</field>
+                                    </shadow>
+                                    <block type="variables_get" id="q(-*E64R)_;Zu|pjwc1T">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="whenDraggedOver" id="4^=,E$!G]u+/WVKje%#q">
+                                      <field name="X_RAY">FALSE</field>
+                                      <field name="LEFT_BUTTON">TRUE</field>
+                                      <field name="MIDDLE_BUTTON">TRUE</field>
+                                      <field name="RIGHT_BUTTON">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="objectList" id="P%0{jmH#=e=P!/dMK}M-">
+                                          <field name="FIELDNAME">Halfcube2</field>
+                                        </shadow>
+                                      </value>
+                                      <statement name="DO_MOVE">
+                                        <block type="dragMove" id="Nw6|YjS~7Ni68|P-o=Os">
+                                          <field name="MODE">XYZ</field>
+                                          <value name="TARGETOBJ">
+                                            <shadow type="objectList" id="AE14mp`pYM-7F^O=PR*q">
+                                              <field name="FIELDNAME">Halfcube2</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="eventHTMLElem" id="mCv08V(tR)V-y%}@~`vz">
+                          <field name="EVENT">click</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="ID">
+                            <shadow type="text" id="IJW;dOzSn2},_@-FBBEb">
+                              <field name="TEXT">piece2</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="lists_setIndex" id="(v%smD|Vi;;|H-lO-T]l">
+                              <mutation at="false"/>
+                              <field name="MODE">INSERT</field>
+                              <field name="WHERE">LAST</field>
+                              <value name="LIST">
+                                <block type="variables_get" id="s|T+,8b~OH*;i^qa%uW:">
+                                  <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="variables_get" id="2RW*szk`.O9PHMp~j+Re">
+                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set" id="N1?FSqEqS?O14mJ,s;n}">
+                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                  <value name="VALUE">
+                                    <block type="cloneObject" id="/[PNSaw$u/|#pH2oYIFA">
+                                      <value name="OBJECTINPUT">
+                                        <shadow type="objectList" id="yuCZrAsku4+W}PRyzi1G">
+                                          <field name="FIELDNAME">Cube</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="show" id="?/ADyjwB1o)sY!6j@kJM">
+                                      <value name="VALUE">
+                                        <shadow type="objectList">
+                                          <field name="FIELDNAME">Two stud</field>
+                                        </shadow>
+                                        <block type="variables_get" id="QTfus3j6O#2oM2F9`xS@">
+                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="whenDraggedOver" id="D4s$SgAX/^A:(4Q[X8%-">
+                                          <field name="X_RAY">FALSE</field>
+                                          <field name="LEFT_BUTTON">TRUE</field>
+                                          <field name="MIDDLE_BUTTON">TRUE</field>
+                                          <field name="RIGHT_BUTTON">TRUE</field>
+                                          <value name="VALUE">
+                                            <shadow type="objectList">
+                                              <field name="FIELDNAME">Rect block</field>
+                                            </shadow>
+                                            <block type="variables_get" id="O~GrpuE|9/JhUn|?},`0">
+                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                            </block>
+                                          </value>
+                                          <statement name="DO_MOVE">
+                                            <block type="dragMove" id="X6]36x]/p+esuSJ,zQKB">
+                                              <field name="MODE">XYZ</field>
+                                              <value name="TARGETOBJ">
+                                                <shadow type="objectList">
+                                                  <field name="FIELDNAME">Rect block</field>
+                                                </shadow>
+                                                <block type="variables_get" id="Mmol2!H(5X[Z6t6CyuOL">
+                                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="eventHTMLElem" id="X`3p05ReN55+rY3Y_]nC">
+                              <field name="EVENT">click</field>
+                              <field name="PARENT">TRUE</field>
+                              <value name="ID">
+                                <shadow type="text" id="4`R]+rd]AY7Oqoe,a[Xt">
+                                  <field name="TEXT">piece3</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="lists_setIndex" id="PQ_dz2z,W!aozA=j%qE1">
+                                  <mutation at="false"/>
+                                  <field name="MODE">INSERT</field>
+                                  <field name="WHERE">LAST</field>
+                                  <value name="LIST">
+                                    <block type="variables_get" id="FJkWU,3nZHinP~o(I7_H">
+                                      <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="variables_get" id="@iX:44qw7a)MRKMsC66,">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="-EM8V![zeX1;p_8N6nZf">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                      <value name="VALUE">
+                                        <block type="cloneObject" id="phCDgsR?N~-(N0OV6Xm]">
+                                          <value name="OBJECTINPUT">
+                                            <shadow type="objectList" id="k;5^cWg!QUf56Xb/A4Gb">
+                                              <field name="FIELDNAME">Rectangle</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="show" id="Ua7C;HK3i77n?)c,4q=d">
+                                          <value name="VALUE">
+                                            <shadow type="objectList">
+                                              <field name="FIELDNAME">Two stud</field>
+                                            </shadow>
+                                            <block type="variables_get" id="cm(;WK_3kNlty_zAW]p5">
+                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="whenDraggedOver" id="*_..P.q4y?!U?,t7fcRc">
+                                              <field name="X_RAY">FALSE</field>
+                                              <field name="LEFT_BUTTON">TRUE</field>
+                                              <field name="MIDDLE_BUTTON">TRUE</field>
+                                              <field name="RIGHT_BUTTON">TRUE</field>
+                                              <value name="VALUE">
+                                                <shadow type="objectList">
+                                                  <field name="FIELDNAME">Rect block</field>
+                                                </shadow>
+                                                <block type="variables_get" id="6sX@NFIr(];wEgfT*XGE">
+                                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                </block>
+                                              </value>
+                                              <statement name="DO_MOVE">
+                                                <block type="dragMove" id="H7Rc}3[Qi]|{n4ly,k[q">
+                                                  <field name="MODE">XYZ</field>
+                                                  <value name="TARGETOBJ">
+                                                    <shadow type="objectList">
+                                                      <field name="FIELDNAME">Rect block</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id=":xL+~u*MFC5aF|nBxOSr">
+                                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="I@+3/3J;+]PXxL;dnxGF" x="-890" y="-470">
+      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+      <value name="VALUE">
+        <block type="cloneObject" id="IpQ-0#r|bjM;4HbaRNlj">
+          <value name="OBJECTINPUT">
+            <shadow type="objectList" id="#@[p6qR6S0l2an45EVUU">
+              <field name="FIELDNAME">Halfcube</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="Q!)z%0h)j_mAD+tfW[W2" x="-1950" y="-310">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text" id="F2OE:udoHt6{pmbAp.l{">
+          <field name="TEXT"/>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="math_arithmetic" id="jG~K{M}7KQPq{T:|F:L." x="-850" y="-250">
+      <field name="OP">MULTIPLY</field>
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">2</field>
+        </shadow>
+        <block type="variables_get" id="TBRhQ;=W@6sWUpr9z*wB">
+          <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+        </block>
+      </value>
+      <value name="B">
+        <shadow type="math_number" id="ea-hIJn_X[CIRQcrhtdv">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="tdyEpM#fqf1(#y}#Xjse" x="-1930" y="-170">
+      <field name="X_RAY">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList">
+          <field name="FIELDNAME">Rect block</field>
+        </shadow>
+        <block type="allObjectList" id="ms-0JSjCXJ|)VA~hsR9b"/>
+      </value>
+      <statement name="DO_MOVE">
+        <block type="dragMove" id="1pga|-h=CvAP(b(7I$XC">
+          <field name="MODE">XYZ</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList">
+              <field name="FIELDNAME">Rect block</field>
+            </shadow>
+            <block type="allObjectList" id="%ew(HnQ#}E*XR9CBnBwB"/>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="math_arithmetic" id=",P^7TBYynfPNUW!|MJs%" x="-910" y="-210">
+      <field name="OP">MULTIPLY</field>
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">2</field>
+        </shadow>
+        <block type="variables_get" id="O36R_cGm4F.C.SGzxKaT">
+          <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+        </block>
+      </value>
+      <value name="B">
+        <shadow type="math_number" id="qfKDF7?f#wk@OJez,Q^:">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="oiToT}bKoUX**pmsRm+L" x="-1727" y="-141">
+      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="9nIplR%yuy:xx[kACHNO" x="-254" y="86">
+      <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_for" id="[K2/_]q$!y_J]B4S}BKG" x="-1390" y="430">
+      <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+      <value name="FROM">
+        <shadow type="math_number" id="dIysn,F}dWx`BjysUfba">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number" id="(.D,_%4hlJlU(q6UG4]v">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="BY">
+        <shadow type="math_number" id="e1`;;Q~Fny@w0oi/DX8V">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="variables_set" id="y#hRO|CJ^fumg$tm%EJ|">
+          <field name="VAR" id="=Gu6yP5HWhp[6hC^$0S]">k</field>
+          <value name="VALUE">
+            <block type="objectList" id="]X{nMq!cbceEwEtI9#AC">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="528.4001098632812" viewport-y="210.39995574951172" viewport-w="614.4" viewport-h="347.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

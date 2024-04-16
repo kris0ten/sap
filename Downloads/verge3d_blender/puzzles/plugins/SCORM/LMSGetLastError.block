@@ -1,0 +1,26 @@
+<template
+    color="#500000"
+    inline="true"
+    output="String"
+
+    tooltip="Returns the error code that resulted from the last API call."
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/SCORM.html#lms_get_last_error"
+>
+    <dummy>
+        <label>lms get last error</label>
+    </dummy>
+</template>
+
+<script>
+function code(block) {
+    const fun = Plug.provide('LMSGetLastError', function() {
+        // LMSGetLastError puzzle
+	if (scormAPI !== null)
+            return scormAPI.LMSGetLastError();
+        else
+            return '';
+    });
+
+    return [`${fun}()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+}
+</script>

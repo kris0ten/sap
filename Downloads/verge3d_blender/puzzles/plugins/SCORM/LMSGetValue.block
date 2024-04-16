@@ -1,0 +1,29 @@
+<template
+    color="#500000"
+    inline="true"
+    output="String"
+
+    tooltip="Retrieves a value from the LMS."
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/SCORM.html#lms_get_value"
+>
+    <value name="ELEMENT" type="String">
+        <label>lms get value</label>
+    </value>
+</template>
+
+<script>
+function code(block) {
+    const element = Blockly.JavaScript.valueToCode(block, 'ELEMENT',
+            Blockly.JavaScript.ORDER_NONE) || '\'\'';
+
+    const fun = Plug.provide('LMSGetValue', function(element) {
+        // LMSGetValue puzzle
+	if (scormAPI !== null)
+            return scormAPI.LMSGetValue(element);
+        else
+            return '';
+    });
+
+    return [`${fun}(${element})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+}
+</script>

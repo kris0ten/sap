@@ -1,0 +1,714 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Числовые Пазлы - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="These puzzles provide means for various operations with numbers in your scenario.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/puzzles/Numbers.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Числовые Пазлы - Soft8Soft">
+            <meta property="og:description" content="These puzzles provide means for various operations with numbers in your scenario.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/puzzles/Numbers.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Числовые Пазлы - Soft8Soft">
+            <meta name="twitter:description" content="These puzzles provide means for various operations with numbers in your scenario.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-number-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-angle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-elementary-operation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-elementary-operation-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-arithmetic-operation-single-input.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-arithmetic-operation-single-input-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-check.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-check-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-clamp.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-clamp-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-integer.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-integer-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-fraction.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-fraction-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-remainder.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-remainder-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-operations-on-list.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-operations-on-list-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-trigonometric-functions.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-trigonometric-functions-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-constants.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-constants-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-create-vector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-set-vector-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-get-vector-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-vector-math.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Числа</h1>
+
+    <p>
+      Эти пазлы предоставляют средства для выполнения различных операций с числами в вашем сценарии.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers.jpg" style="max-width: 1000px">
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/puzzles/Numbers.html#puzzles_reference">Перечень Пазлов</a><ul><li><a href="manual/ru/puzzles/Numbers.html#number">number</a></li><li><a href="manual/ru/puzzles/Numbers.html#angle">angle</a></li><li><a href="manual/ru/puzzles/Numbers.html#arithmetic_operation_two_inputs">arithmetic operation (with two inputs)</a></li><li><a href="manual/ru/puzzles/Numbers.html#arithmetic_operation_single_input">arithmetic operation (with single input)</a></li><li><a href="manual/ru/puzzles/Numbers.html#round">round (to integer)</a></li><li><a href="manual/ru/puzzles/Numbers.html#round_with_precision">round with precision</a></li><li><a href="manual/ru/puzzles/Numbers.html#check">check</a></li><li><a href="manual/ru/puzzles/Numbers.html#clamp">clamp</a></li><li><a href="manual/ru/puzzles/Numbers.html#random_integer">random integer</a></li><li><a href="manual/ru/puzzles/Numbers.html#random_fraction">random fraction</a></li><li><a href="manual/ru/puzzles/Numbers.html#remainder">remainder</a></li><li><a href="manual/ru/puzzles/Numbers.html#operations_on_list">operations on list</a></li><li><a href="manual/ru/puzzles/Numbers.html#trigonometric_functions">trigonometric functions</a></li><li><a href="manual/ru/puzzles/Numbers.html#constants">constants</a></li><li><a href="manual/ru/puzzles/Numbers.html#create_vector">create vector</a></li><li><a href="manual/ru/puzzles/Numbers.html#set_vector_value">set vector value</a></li><li><a href="manual/ru/puzzles/Numbers.html#get_vector_value">get vector value</a></li><li><a href="manual/ru/puzzles/Numbers.html#vector_math">vector math</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Перечень Пазлов</h2>
+
+    <p><a href="manual/ru/puzzles/Numbers.html#number" id="number" class="permalink">#</a></p>
+
+    <h3>number</h3>
+
+    <p>
+      Этот универсальный пазл дает возможность внести некоторое число в сценарий пазлов.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-number.jpg" style="max-width: 1000px">
+
+    <p>
+      Числа можно записывать без десятичных знаков (целые числа) или с десятичными знаками (числа с плавающей точкой). Очень большие или очень маленькие числа могут быть записаны с помощью научной (экспоненциальной) нотации.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-number-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#angle" id="angle" class="permalink">#</a></p>
+
+    <h3>angle</h3>
+
+    <p>
+      Этот пазл позволяет визуально определить угол (в градусах).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-angle.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#arithmetic_operation_two_inputs" id="arithmetic_operation_two_inputs" class="permalink">#</a></p>
+
+    <h3>arithmetic operation (with two inputs)</h3>
+
+    <p>
+      Этот пазл позволяет выполнять элементарные арифметические действия: сложение (+), вычитание (-), умножение (×) и деление (÷), а также экспоненцию (^).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-elementary-operation.jpg" style="max-width: 1000px">
+
+    <p>
+      Обратите внимание, что арифметика с плавающей точкой не всегда точна на 100% и может давать непредсказуемые результаты при сравнении числовых значений. Чтобы избавиться от проблем с точностью, вы можете использовать пазл <a href="manual/ru/puzzles/Numbers.html#round_with_precision">rounding with precision</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-elementary-operation-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#arithmetic_operation_single_input" id="arithmetic_operation_single_input" class="permalink">#</a></p>
+
+    <h3>arithmetic operation (with single input)</h3>
+
+    <p>
+      Этот пазл позволяет выполнять следующие математические операции: квадратный корень (√), абсолютное значение - модуль (|x|), изменение знака - отрицание (-), натуральный логарифм (ln), десятичный логарифм (log10), натуральная экспоненциальная функция (e^) и степень десяти (10^).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-arithmetic-operation-single-input.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-arithmetic-operation-single-input-example.jpg" style="max-width: 1000px">
+
+    <p>
+      Обратите внимание, что арифметика с плавающей точкой не всегда точна на 100% и может давать непредсказуемые результаты при сравнении числовых значений. Чтобы избавиться от проблем с точностью, вы можете использовать пазл <a href="manual/ru/puzzles/Numbers.html#round_with_precision">rounding with precision</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#round" id="round" class="permalink">#</a></p>
+
+    <h3>round (to integer)</h3>
+
+    <p>
+      Данный пазл округляет заданное число. Вариант <strong>round</strong> округляет число до ближайшего целого числа: 2,49 округляется вниз (получается 2), а 2,5 округляется вверх (получается 3). Вариант <strong>round up</strong> округляет число в большую сторону до ближайшего целого числа: 2.1 округляется в большую сторону (получается 3). Вариант <strong>round down</strong> округляет число до ближайшего целого: 2.9 округляется вниз (получается 2).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-round.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-round-examples.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#round_with_precision" id="round_with_precision" class="permalink">#</a></p>
+
+    <h3>round with precision</h3>
+
+    <p>
+      Этот пазл округляет заданное число с указанной точностью.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-round-with-precision.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-round-with-precision-example.jpg" style="max-width: 1000px">
+
+    <p>
+      Арифметика с плавающей точкой не всегда точна на 100% и может давать непредсказуемые результаты при сравнении числовых значений. Чтобы избавиться от проблем с точностью, вы можете использовать <a href="manual/ru/puzzles/Numbers.html#round_with_precision">rounding with precision</a> следующим образом: 
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-round-with-precision-example2.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#check" id="check" class="permalink">#</a></p>
+
+    <h3>check</h3>
+
+    <p>
+      Этот пазл проверяет, является ли заданное число четным, нечетным, простым, целым, положительным, отрицательным или кратным какому-либо другому числу. Результатом будет <strong>true</strong>, если это так, и <strong>false</strong>, если нет. Применяется с пазлами <a href="manual/ru/puzzles/Logic.html">Logic</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-check.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-check-examples.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#clamp" id="clamp" class="permalink">#</a></p>
+
+    <h3>clamp</h3>
+
+    <p>
+      Этот пазл ограничивает число, находящееся между указанными пределами (включительно).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-clamp.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-clamp-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#random_integer" id="random_integer" class="permalink">#</a></p>
+
+    <h3>random integer</h3>
+
+    <p>
+      Этот пазл возвращает случайное целое число между указанными числами (включая оба предела).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-random-integer.jpg" style="max-width: 1000px">
+
+    <p>
+      Примечание: возможно введение нецелых пределов, хотя это расширяет диапазон, поскольку этот пазл выполняет некоторые дополнительные округления. 
+    </p>
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-random-integer-examples.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#random_fraction" id="random_fraction" class="permalink">#</a></p>
+
+    <h3>random fraction</h3>
+
+    <p>
+      Данный пазл возвращает случайное число с плавающей точкой в диапазоне от 0 (включительно) до 1 (исключительно).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-random-fraction.jpg" style="max-width: 1000px">
+
+    <p>
+      В следующем примере этот пазл используется для генерации случайного цвета для материала:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-random-fraction-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#remainder" id="remainder" class="permalink">#</a></p>
+
+    <h3>remainder</h3>
+
+    <p>
+      Этот пазл позволяет найти остаток после деления одного числа на другое (операция модуляции).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-remainder.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-remainder-examples.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#operations_on_list" id="operations_on_list" class="permalink">#</a></p>
+
+    <h3>operations on list</h3>
+
+    <p>
+      Выполняет операцию над числами указанного <a href="manual/ru/puzzles/Lists.html">списка</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-operations-on-list.jpg" style="max-width: 1000px">
+
+    <p>
+    </p><ul>
+    <li>
+    <strong>sum</strong> - вычисляет сумму всех чисел в списке.
+    </li>
+    <li>
+    <strong>min</strong> - находит наименьшее число.
+    </li>
+    <li>
+    <strong>max</strong> - находит наибольшее число.
+    </li>
+    <li>
+    <strong>average</strong> - находит среднее арифметическое (как сумму всех чисел, деленную на длину списка).
+    </li>
+    <li>
+    <strong>median</strong> - находит медиану (как среднее число, когда все числа сортируются от наименьшего к наибольшему).
+    </li>
+    <li>
+    <strong>modes</strong> - находит режимы (в виде списка чисел, которые наиболее часто встречаются в списке).
+    </li>
+    <li>
+    <strong>standard deviation</strong> - вычисляет стандартное отклонение (как квадратный корень из среднего квадратичного отклонения от среднего арифметического).
+    </li>
+    <li>
+    <strong>random item</strong> - возвращает случайно выбранный элемент.
+    </li>
+    </ul>
+    <p></p>
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-operations-on-list-examples.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#trigonometric_functions" id="trigonometric_functions" class="permalink">#</a></p>
+
+    <h3>trigonometric functions</h3>
+
+    <p>
+      Данный пазл позволяет вычислить значения тригонометрических функций *синус* (sin), *косинус* (cos) и *тангенс* (tan), а также значения их обратных аналогов *арксинус* (asin), *арккосинус* (acos) и *арктангенс* (atan). Пазл ожидает (или возвращает) значения, выраженные в градусах.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-trigonometric-functions.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-trigonometric-functions-examples.jpg" style="max-width: 1000px">
+
+    <p>
+      Обратите внимание, что арифметика с плавающей точкой не всегда точна на 100% и может давать непредсказуемые результаты при сравнении числовых значений. Чтобы избавиться от проблем с точностью, вы можете использовать пазл <a href="manual/ru/puzzles/Numbers.html#round_with_precision">rounding with precision</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#constants" id="constants" class="permalink">#</a></p>
+
+    <h3>constants</h3>
+
+    <p>
+      Этот пазл позволяет получить следующие математические константы: пи (π), число Эйлера <i>e</i>, золотое сечение (φ), квадратный корень из 2, квадратный корень из ½ и значение бесконечности (∞).
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-constants.jpg" style="max-width: 1000px">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-constants-examples.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#create_vector" id="create_vector" class="permalink">#</a></p>
+
+    <h3>create vector</h3>
+
+    <p>
+      Этот пазл возвращает новый трехмерный вектор, состоящий из заданных координат X, Y, Z.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-create-vector.jpg" class="centered" style="max-width: 664px">
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#set_vector_value" id="set_vector_value" class="permalink">#</a></p>
+
+    <h3>set vector value</h3>
+
+    <p>
+      Этот пазл устанавливает заданное значение (<strong>x</strong>, <strong>y</strong>, <strong>z</strong> координаты или <strong>length</strong>) для заданного вектора.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-set-vector-value.jpg" class="centered" style="max-width: 611px">
+
+
+    <p><a href="manual/ru/puzzles/Numbers.html#get_vector_value" id="get_vector_value" class="permalink">#</a></p>
+
+    <h3>get vector value</h3>
+
+    <p>
+      Данный пазл возвращает заданное значение, взятое из заданного вектора.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-get-vector-value.jpg" class="centered" style="max-width: 744px">
+
+    <p>Возвращает значения:</p>
+
+    <ul>
+      <li><strong>x</strong> - координата X.</li>
+      <li><strong>y</strong> - координата Y.</li>
+      <li><strong>z</strong> - координата Z.</li>
+      <li><strong>is zero</strong> - <em>true</em> если вектор имеет нулевую длину, в противном случае<em>false</em>.</li>
+      <li><strong>length</strong> - длина вектора.</li>
+      <li><strong>negated</strong> - новый вектор, указывающий в обратном направлении.</li>
+      <li><strong>normalized</strong> - новый вектор длиной 1.</li>
+    </ul>
+
+    <p><a href="manual/ru/puzzles/Numbers.html#vector_math" id="vector_math" class="permalink">#</a></p>
+
+    <h3>vector math</h3>
+
+    <p>
+      Данный пазл выполняет математическую операцию между двумя векторами и возвращает новый вектор.
+    </p>
+
+    <img src="files/puzzles/puzzles-numbers-vector-math.jpg" class="centered" style="max-width: 758px">
+
+    <p>Операции:</p>
+
+    <ul>
+      <li><strong>+</strong> - добавляет векторы.</li>
+      <li><strong>-</strong> - вычитает векторы.</li>
+      <li><strong>×</strong> - перемножает векторы (по компонентам).</li>
+      <li><strong>/</strong> - делит векторы (по компонентам).</li>
+      <li><strong>dot</strong> - вычислить и вернуть точечное произведение между векторами.</li>
+      <li><strong>cross</strong> - вычислить и вернуть перекрестное произведение между векторами.</li>
+      <li><strong>rotate</strong> - повернуть вектор на углы Эйлера, указанные в качестве второго параметра. Углы Эйлера задаются в градусах.</li>
+    </ul>
+
+
+    <h2>Проблемы с Пазлами?</h2>
+
+    <p>Обратитесь за помощью на наш <a href="https://www.soft8soft.com/forums/" target="_blank">форум</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <div class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">Soft8Soft – трёхмерные решения для сайтов</a><div>Последнее обновление: 28 марта 2022 г.</div></div></body></html>

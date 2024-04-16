@@ -1,0 +1,24 @@
+<template
+    color="#500000"
+    prev="true"
+    next="true"
+
+    tooltip='Ends a communication session with the LMS.'
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/SCORM.html#lms_finish"
+>
+    <dummy>
+        <label>lms finish</label>
+    </dummy>
+</template>
+
+<script>
+function code(block) {
+    const fun = Plug.provide('LMSFinish', function() {
+        // LMSFinish puzzle
+	if (scormAPI !== null)
+            return scormAPI.LMSFinish('');
+    });
+
+    return `${fun}();`;
+}
+</script>

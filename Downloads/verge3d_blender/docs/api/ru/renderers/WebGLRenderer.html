@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="ru"><head>
+                <title>WebGLRenderer - Verge3D User Manual - Soft8Soft</title>
+                <meta name="description" content="Learn how to use WebGLRenderer in your interactive 3D apps made with Verge3D or Three.js">
+            
+    <meta charset="utf-8">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/ru/renderers/WebGLRenderer.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="WebGLRenderer - Verge3D User Manual - Soft8Soft">
+            <meta property="og:description" content="Learn how to use WebGLRenderer in your interactive 3D apps made with Verge3D or Three.js">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/ru/renderers/WebGLRenderer.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="WebGLRenderer - Verge3D User Manual - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to use WebGLRenderer in your interactive 3D apps made with Verge3D or Three.js">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="api/ru/index.html">Руководство разработчика</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Programmer's Guide</h2><ul id="Programmer_s_Guide"><li><a href="manual/ru/programmers_guide/Developer-Kit.html" id="Programmer_s_Guide_Developer_Kit">Developer Kit</a></li><li><a href="manual/ru/programmers_guide/Programming-basics.html" id="Programmer_s_Guide_Programming_Basics">Programming Basics</a></li><li><a href="manual/ru/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="Programmer_s_Guide_Integration_with_React.js/Vue.js">Integration with React.js/Vue.js</a></li><li><a href="manual/ru/programmers_guide/Matrix-transformations.html" id="Programmer_s_Guide_Matrix_Transformations">Matrix Transformations</a></li><li><a href="manual/ru/programmers_guide/Animation-system.html" id="Programmer_s_Guide_Animation_System">Animation System</a></li><li><a href="manual/ru/programmers_guide/Drawing-lines.html" id="Programmer_s_Guide_Drawing_Lines">Drawing Lines</a></li><li><a href="manual/ru/programmers_guide/How-to-update-things.html" id="Programmer_s_Guide_How_to_Update_Things">How to Update Things</a></li><li><a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html" id="Programmer_s_Guide_How_to_Obtain_Sources">How to Obtain Sources</a></li></ul></div><div><h2>Animation</h2><ul id="Animation"><li><a href="api/ru/animation/AnimationAction.html" id="Animation_AnimationAction">AnimationAction</a></li><li><a href="api/ru/animation/AnimationClip.html" id="Animation_AnimationClip">AnimationClip</a></li><li><a href="api/ru/animation/AnimationMixer.html" id="Animation_AnimationMixer">AnimationMixer</a></li><li><a href="api/ru/animation/AnimationObjectGroup.html" id="Animation_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/ru/animation/AnimationUtils.html" id="Animation_AnimationUtils">AnimationUtils</a></li><li><a href="api/ru/animation/KeyframeTrack.html" id="Animation_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/ru/animation/PropertyBinding.html" id="Animation_PropertyBinding">PropertyBinding</a></li><li><a href="api/ru/animation/PropertyMixer.html" id="Animation_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>Animation / Tracks</h2><ul id="Animation_/_Tracks"><li><a href="api/ru/animation/tracks/BooleanKeyframeTrack.html" id="Animation_/_Tracks_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/ColorKeyframeTrack.html" id="Animation_/_Tracks_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/NumberKeyframeTrack.html" id="Animation_/_Tracks_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/QuaternionKeyframeTrack.html" id="Animation_/_Tracks_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/StringKeyframeTrack.html" id="Animation_/_Tracks_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/VectorKeyframeTrack.html" id="Animation_/_Tracks_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>Application</h2><ul id="Application"><li><a href="api/ru/extras/App.html" id="Application_App">App</a></li><li><a href="api/ru/extras/AppPuzzles.html" id="Application_AppPuzzles">AppPuzzles</a></li><li><a href="api/ru/extras/AppUtils.html" id="Application_AppUtils">AppUtils</a></li></ul></div><div><h2>Audio</h2><ul id="Audio"><li><a href="api/ru/audio/Audio.html" id="Audio_Audio">Audio</a></li><li><a href="api/ru/audio/AudioAnalyser.html" id="Audio_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/ru/audio/AudioContext.html" id="Audio_AudioContext">AudioContext</a></li><li><a href="api/ru/audio/AudioListener.html" id="Audio_AudioListener">AudioListener</a></li><li><a href="api/ru/audio/PositionalAudio.html" id="Audio_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>Cameras</h2><ul id="Cameras"><li><a href="api/ru/cameras/ArrayCamera.html" id="Cameras_ArrayCamera">ArrayCamera</a></li><li><a href="api/ru/cameras/Camera.html" id="Cameras_Camera">Camera</a></li><li><a href="api/ru/cameras/CubeCamera.html" id="Cameras_CubeCamera">CubeCamera</a></li><li><a href="api/ru/cameras/OrthographicCamera.html" id="Cameras_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/ru/cameras/PerspectiveCamera.html" id="Cameras_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/ru/cameras/StereoCamera.html" id="Cameras_StereoCamera">StereoCamera</a></li></ul></div><div><h2>Constants</h2><ul id="Constants"><li><a href="api/ru/constants/Animation.html" id="Constants_Animation">Animation</a></li><li><a href="api/ru/constants/Controls.html" id="Constants_Controls">Controls</a></li><li><a href="api/ru/constants/Core.html" id="Constants_Core">Core</a></li><li><a href="api/ru/constants/CustomBlendingEquations.html" id="Constants_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/ru/constants/Lights.html" id="Constants_Lights">Lights</a></li><li><a href="api/ru/constants/Materials.html" id="Constants_Materials">Materials</a></li><li><a href="api/ru/constants/Renderer.html" id="Constants_Renderer">Renderer</a></li><li><a href="api/ru/constants/Textures.html" id="Constants_Textures">Textures</a></li></ul></div><div><h2>Constraints</h2><ul id="Constraints"><li><a href="api/ru/constraints/ChildOfConstraint.html" id="Constraints_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/ru/constraints/Constraint.html" id="Constraints_Constraint">Constraint</a></li><li><a href="api/ru/constraints/CopyLocationConstraint.html" id="Constraints_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/ru/constraints/CopyRotationConstraint.html" id="Constraints_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/ru/constraints/CopyScaleConstraint.html" id="Constraints_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/ru/constraints/FloorConstraint.html" id="Constraints_FloorConstraint">FloorConstraint</a></li><li><a href="api/ru/constraints/LimitLocationConstraint.html" id="Constraints_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/ru/constraints/LimitRotationConstraint.html" id="Constraints_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/ru/constraints/LimitScaleConstraint.html" id="Constraints_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/ru/constraints/LockedTrackConstraint.html" id="Constraints_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/ru/constraints/TargetConstraint.html" id="Constraints_TargetConstraint">TargetConstraint</a></li><li><a href="api/ru/constraints/TrackToConstraint.html" id="Constraints_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>Controls</h2><ul id="Controls"><li><a href="api/ru/controls/KeyListener.html" id="Controls_KeyListener">KeyListener</a></li><li><a href="api/ru/controls/OrbitControls.html" id="Controls_OrbitControls">OrbitControls</a></li></ul></div><div><h2>Core</h2><ul id="Core"><li><a href="api/ru/core/BufferAttribute.html" id="Core_BufferAttribute">BufferAttribute</a></li><li><a href="api/ru/core/BufferGeometry.html" id="Core_BufferGeometry">BufferGeometry</a></li><li><a href="api/ru/core/Clock.html" id="Core_Clock">Clock</a></li><li><a href="api/ru/core/Detector.html" id="Core_Detector">Detector</a></li><li><a href="api/ru/core/DirectGeometry.html" id="Core_DirectGeometry">DirectGeometry</a></li><li><a href="api/ru/core/EventDispatcher.html" id="Core_EventDispatcher">EventDispatcher</a></li><li><a href="api/ru/core/Face3.html" id="Core_Face3">Face3</a></li><li><a href="api/ru/core/Geometry.html" id="Core_Geometry">Geometry</a></li><li><a href="api/ru/core/InstancedBufferAttribute.html" id="Core_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/ru/core/InstancedBufferGeometry.html" id="Core_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/ru/core/InstancedInterleavedBuffer.html" id="Core_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBuffer.html" id="Core_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBufferAttribute.html" id="Core_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/ru/core/Layers.html" id="Core_Layers">Layers</a></li><li><a href="api/ru/core/Object3D.html" id="Core_Object3D">Object3D</a></li><li><a href="api/ru/core/Raycaster.html" id="Core_Raycaster">Raycaster</a></li><li><a href="api/ru/core/Uniform.html" id="Core_Uniform">Uniform</a></li></ul></div><div><h2>Core / BufferAttributes</h2><ul id="Core_/_BufferAttributes"><li><a href="api/ru/core/bufferAttributeTypes/BufferAttributeTypes.html" id="Core_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>Extras</h2><ul id="Extras"><li><a href="api/ru/extras/Earcut.html" id="Extras_Earcut">Earcut</a></li><li><a href="api/ru/extras/ImageUtils.html" id="Extras_ImageUtils">ImageUtils</a></li><li><a href="api/ru/extras/PMREMGenerator.html" id="Extras_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/ru/extras/Preloader.html" id="Extras_Preloader">Preloader</a></li><li><a href="api/ru/extras/PuzzlesLoader.html" id="Extras_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/ru/extras/SceneUtils.html" id="Extras_SceneUtils">SceneUtils</a></li><li><a href="api/ru/extras/ShapeUtils.html" id="Extras_ShapeUtils">ShapeUtils</a></li><li><a href="api/ru/extras/SimplePreloader.html" id="Extras_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>Extras / Core</h2><ul id="Extras_/_Core"><li><a href="api/ru/extras/core/Curve.html" id="Extras_/_Core_Curve">Curve</a></li><li><a href="api/ru/extras/core/CurvePath.html" id="Extras_/_Core_CurvePath">CurvePath</a></li><li><a href="api/ru/extras/core/Font.html" id="Extras_/_Core_Font">Font</a></li><li><a href="api/ru/extras/core/Interpolations.html" id="Extras_/_Core_Interpolations">Interpolations</a></li><li><a href="api/ru/extras/core/Path.html" id="Extras_/_Core_Path">Path</a></li><li><a href="api/ru/extras/core/Shape.html" id="Extras_/_Core_Shape">Shape</a></li><li><a href="api/ru/extras/core/ShapePath.html" id="Extras_/_Core_ShapePath">ShapePath</a></li></ul></div><div><h2>Extras / Curves</h2><ul id="Extras_/_Curves"><li><a href="api/ru/extras/curves/ArcCurve.html" id="Extras_/_Curves_ArcCurve">ArcCurve</a></li><li><a href="api/ru/extras/curves/CatmullRomCurve3.html" id="Extras_/_Curves_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve.html" id="Extras_/_Curves_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve3.html" id="Extras_/_Curves_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/ru/extras/curves/EllipseCurve.html" id="Extras_/_Curves_EllipseCurve">EllipseCurve</a></li><li><a href="api/ru/extras/curves/LineCurve.html" id="Extras_/_Curves_LineCurve">LineCurve</a></li><li><a href="api/ru/extras/curves/LineCurve3.html" id="Extras_/_Curves_LineCurve3">LineCurve3</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve.html" id="Extras_/_Curves_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve3.html" id="Extras_/_Curves_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/ru/extras/curves/SplineCurve.html" id="Extras_/_Curves_SplineCurve">SplineCurve</a></li></ul></div><div><h2>Extras / Objects</h2><ul id="Extras_/_Objects"><li><a href="api/ru/extras/objects/ImmediateRenderObject.html" id="Extras_/_Objects_ImmediateRenderObject">ImmediateRenderObject</a></li><li><a href="api/ru/extras/objects/LineHTML.html" id="Extras_/_Objects_LineHTML">LineHTML</a></li><li><a href="api/ru/extras/objects/MeshLine.html" id="Extras_/_Objects_MeshLine">MeshLine</a></li><li><a href="api/ru/extras/objects/MeshLineIndexed.html" id="Extras_/_Objects_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/ru/extras/objects/MeshLineMaterial.html" id="Extras_/_Objects_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>Geometries</h2><ul id="Geometries"><li><a href="api/ru/geometries/BoxBufferGeometry.html" id="Geometries_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/ru/geometries/BoxGeometry.html" id="Geometries_BoxGeometry">BoxGeometry</a></li><li><a href="api/ru/geometries/CircleBufferGeometry.html" id="Geometries_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/ru/geometries/CircleGeometry.html" id="Geometries_CircleGeometry">CircleGeometry</a></li><li><a href="api/ru/geometries/ConeBufferGeometry.html" id="Geometries_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/ru/geometries/ConeGeometry.html" id="Geometries_ConeGeometry">ConeGeometry</a></li><li><a href="api/ru/geometries/CylinderBufferGeometry.html" id="Geometries_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/ru/geometries/CylinderGeometry.html" id="Geometries_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/ru/geometries/DodecahedronBufferGeometry.html" id="Geometries_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/ru/geometries/DodecahedronGeometry.html" id="Geometries_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/ru/geometries/EdgesGeometry.html" id="Geometries_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/ru/geometries/ExtrudeBufferGeometry.html" id="Geometries_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/ru/geometries/ExtrudeGeometry.html" id="Geometries_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/ru/geometries/IcosahedronBufferGeometry.html" id="Geometries_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/ru/geometries/IcosahedronGeometry.html" id="Geometries_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/ru/geometries/LatheBufferGeometry.html" id="Geometries_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/ru/geometries/LatheGeometry.html" id="Geometries_LatheGeometry">LatheGeometry</a></li><li><a href="api/ru/geometries/OctahedronBufferGeometry.html" id="Geometries_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/ru/geometries/OctahedronGeometry.html" id="Geometries_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/ru/geometries/ParametricBufferGeometry.html" id="Geometries_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/ru/geometries/ParametricGeometry.html" id="Geometries_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/ru/geometries/PlaneBufferGeometry.html" id="Geometries_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/ru/geometries/PlaneGeometry.html" id="Geometries_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/ru/geometries/PolyhedronBufferGeometry.html" id="Geometries_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/ru/geometries/PolyhedronGeometry.html" id="Geometries_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/ru/geometries/RingBufferGeometry.html" id="Geometries_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/ru/geometries/RingGeometry.html" id="Geometries_RingGeometry">RingGeometry</a></li><li><a href="api/ru/geometries/ShapeBufferGeometry.html" id="Geometries_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/ru/geometries/ShapeGeometry.html" id="Geometries_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/ru/geometries/SphereBufferGeometry.html" id="Geometries_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/ru/geometries/SphereGeometry.html" id="Geometries_SphereGeometry">SphereGeometry</a></li><li><a href="api/ru/geometries/TetrahedronBufferGeometry.html" id="Geometries_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/ru/geometries/TetrahedronGeometry.html" id="Geometries_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/ru/geometries/TextBufferGeometry.html" id="Geometries_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/ru/geometries/TextGeometry.html" id="Geometries_TextGeometry">TextGeometry</a></li><li><a href="api/ru/geometries/TorusBufferGeometry.html" id="Geometries_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/ru/geometries/TorusGeometry.html" id="Geometries_TorusGeometry">TorusGeometry</a></li><li><a href="api/ru/geometries/TorusKnotBufferGeometry.html" id="Geometries_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/ru/geometries/TorusKnotGeometry.html" id="Geometries_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/ru/geometries/TubeBufferGeometry.html" id="Geometries_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/ru/geometries/TubeGeometry.html" id="Geometries_TubeGeometry">TubeGeometry</a></li><li><a href="api/ru/geometries/WireframeGeometry.html" id="Geometries_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>Helpers</h2><ul id="Helpers"><li><a href="api/ru/helpers/ArrowHelper.html" id="Helpers_ArrowHelper">ArrowHelper</a></li><li><a href="api/ru/helpers/AxesHelper.html" id="Helpers_AxesHelper">AxesHelper</a></li><li><a href="api/ru/helpers/BoxHelper.html" id="Helpers_BoxHelper">BoxHelper</a></li><li><a href="api/ru/helpers/Box3Helper.html" id="Helpers_Box3Helper">Box3Helper</a></li><li><a href="api/ru/helpers/CameraHelper.html" id="Helpers_CameraHelper">CameraHelper</a></li><li><a href="api/ru/helpers/DirectionalLightHelper.html" id="Helpers_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/ru/helpers/GridHelper.html" id="Helpers_GridHelper">GridHelper</a></li><li><a href="api/ru/helpers/PolarGridHelper.html" id="Helpers_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/ru/helpers/HemisphereLightHelper.html" id="Helpers_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/ru/helpers/PlaneHelper.html" id="Helpers_PlaneHelper">PlaneHelper</a></li><li><a href="api/ru/helpers/PointLightHelper.html" id="Helpers_PointLightHelper">PointLightHelper</a></li><li><a href="api/ru/helpers/SkeletonHelper.html" id="Helpers_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/ru/helpers/SpotLightHelper.html" id="Helpers_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>Lights</h2><ul id="Lights"><li><a href="api/ru/lights/AmbientLight.html" id="Lights_AmbientLight">AmbientLight</a></li><li><a href="api/ru/lights/CubeReflectionProbe.html" id="Lights_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/ru/lights/DirectionalLight.html" id="Lights_DirectionalLight">DirectionalLight</a></li><li><a href="api/ru/lights/HemisphereLight.html" id="Lights_HemisphereLight">HemisphereLight</a></li><li><a href="api/ru/lights/Light.html" id="Lights_Light">Light</a></li><li><a href="api/ru/lights/PointLight.html" id="Lights_PointLight">PointLight</a></li><li><a href="api/ru/lights/RectAreaLight.html" id="Lights_RectAreaLight">RectAreaLight</a></li><li><a href="api/ru/lights/SpotLight.html" id="Lights_SpotLight">SpotLight</a></li></ul></div><div><h2>Lights / Shadows</h2><ul id="Lights_/_Shadows"><li><a href="api/ru/lights/shadows/LightShadow.html" id="Lights_/_Shadows_LightShadow">LightShadow</a></li><li><a href="api/ru/lights/shadows/PointLightShadow.html" id="Lights_/_Shadows_PointLightShadow">PointLightShadow</a></li><li><a href="api/ru/lights/shadows/DirectionalLightShadow.html" id="Lights_/_Shadows_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/ru/lights/shadows/SpotLightShadow.html" id="Lights_/_Shadows_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>Loaders</h2><ul id="Loaders"><li><a href="api/ru/loaders/AnimationLoader.html" id="Loaders_AnimationLoader">AnimationLoader</a></li><li><a href="api/ru/loaders/AudioLoader.html" id="Loaders_AudioLoader">AudioLoader</a></li><li><a href="api/ru/loaders/BufferGeometryLoader.html" id="Loaders_BufferGeometryLoader">BufferGeometryLoader</a></li><li><a href="api/ru/loaders/Cache.html" id="Loaders_Cache">Cache</a></li><li><a href="api/ru/loaders/CompressedTextureLoader.html" id="Loaders_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/ru/loaders/CubeTextureLoader.html" id="Loaders_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/ru/loaders/DataTextureLoader.html" id="Loaders_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/ru/loaders/FileLoader.html" id="Loaders_FileLoader">FileLoader</a></li><li><a href="api/ru/loaders/FontLoader.html" id="Loaders_FontLoader">FontLoader</a></li><li><a href="api/ru/loaders/ImageBitmapLoader.html" id="Loaders_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/ru/loaders/ImageLoader.html" id="Loaders_ImageLoader">ImageLoader</a></li><li><a href="api/ru/loaders/GLTFLoader.html" id="Loaders_GLTFLoader">GLTFLoader</a></li><li><a href="api/ru/loaders/Loader.html" id="Loaders_Loader">Loader</a></li><li><a href="api/ru/loaders/LoaderUtils.html" id="Loaders_LoaderUtils">LoaderUtils</a></li><li><a href="api/ru/loaders/MaterialLoader.html" id="Loaders_MaterialLoader">MaterialLoader</a></li><li><a href="api/ru/loaders/ObjectLoader.html" id="Loaders_ObjectLoader">ObjectLoader</a></li><li><a href="api/ru/loaders/TextureLoader.html" id="Loaders_TextureLoader">TextureLoader</a></li></ul></div><div><h2>Loaders / Managers</h2><ul id="Loaders_/_Managers"><li><a href="api/ru/loaders/managers/DefaultLoadingManager.html" id="Loaders_/_Managers_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/ru/loaders/managers/LoadingManager.html" id="Loaders_/_Managers_LoadingManager">LoadingManager</a></li></ul></div><div><h2>Materials</h2><ul id="Materials"><li><a href="api/ru/materials/LineBasicMaterial.html" id="Materials_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/ru/materials/LineDashedMaterial.html" id="Materials_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/ru/materials/Material.html" id="Materials_Material">Material</a></li><li><a href="api/ru/materials/MaterialUtils.html" id="Materials_MaterialUtils">MaterialUtils</a></li><li><a href="api/ru/materials/MeshBasicMaterial.html" id="Materials_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/ru/materials/MeshDepthMaterial.html" id="Materials_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/ru/materials/MeshDistanceMaterial.html" id="Materials_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/ru/materials/MeshLambertMaterial.html" id="Materials_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/ru/materials/MeshMatcapMaterial.html" id="Materials_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/ru/materials/MeshNodeMaterial.html" id="Materials_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/ru/materials/MeshNormalMaterial.html" id="Materials_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/ru/materials/MeshPhongMaterial.html" id="Materials_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/ru/materials/MeshPhysicalMaterial.html" id="Materials_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/ru/materials/MeshStandardMaterial.html" id="Materials_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/ru/materials/MeshToonMaterial.html" id="Materials_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/ru/materials/PointsMaterial.html" id="Materials_PointsMaterial">PointsMaterial</a></li><li><a href="api/ru/materials/RawShaderMaterial.html" id="Materials_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/ru/materials/ShaderMaterial.html" id="Materials_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/ru/materials/ShadowMaterial.html" id="Materials_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/ru/materials/SpriteMaterial.html" id="Materials_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>Math</h2><ul id="Math"><li><a href="api/ru/math/Box2.html" id="Math_Box2">Box2</a></li><li><a href="api/ru/math/Box3.html" id="Math_Box3">Box3</a></li><li><a href="api/ru/math/Color.html" id="Math_Color">Color</a></li><li><a href="api/ru/math/Cylindrical.html" id="Math_Cylindrical">Cylindrical</a></li><li><a href="api/ru/math/Euler.html" id="Math_Euler">Euler</a></li><li><a href="api/ru/math/Frustum.html" id="Math_Frustum">Frustum</a></li><li><a href="api/ru/math/Interpolant.html" id="Math_Interpolant">Interpolant</a></li><li><a href="api/ru/math/Line3.html" id="Math_Line3">Line3</a></li><li><a href="api/ru/math/MathUtils.html" id="Math_MathUtils">MathUtils</a></li><li><a href="api/ru/math/Matrix3.html" id="Math_Matrix3">Matrix3</a></li><li><a href="api/ru/math/Matrix4.html" id="Math_Matrix4">Matrix4</a></li><li><a href="api/ru/math/Plane.html" id="Math_Plane">Plane</a></li><li><a href="api/ru/math/Quaternion.html" id="Math_Quaternion">Quaternion</a></li><li><a href="api/ru/math/Ray.html" id="Math_Ray">Ray</a></li><li><a href="api/ru/math/Sphere.html" id="Math_Sphere">Sphere</a></li><li><a href="api/ru/math/Spherical.html" id="Math_Spherical">Spherical</a></li><li><a href="api/ru/math/Triangle.html" id="Math_Triangle">Triangle</a></li><li><a href="api/ru/math/Vector2.html" id="Math_Vector2">Vector2</a></li><li><a href="api/ru/math/Vector3.html" id="Math_Vector3">Vector3</a></li><li><a href="api/ru/math/Vector4.html" id="Math_Vector4">Vector4</a></li></ul></div><div><h2>Math / Interpolants</h2><ul id="Math_/_Interpolants"><li><a href="api/ru/math/interpolants/CubicInterpolant.html" id="Math_/_Interpolants_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/ru/math/interpolants/DiscreteInterpolant.html" id="Math_/_Interpolants_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/ru/math/interpolants/LinearInterpolant.html" id="Math_/_Interpolants_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/ru/math/interpolants/QuaternionLinearInterpolant.html" id="Math_/_Interpolants_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>Objects</h2><ul id="Objects"><li><a href="api/ru/objects/Annotation.html" id="Objects_Annotation">Annotation</a></li><li><a href="api/ru/objects/AnnotationControl.html" id="Objects_AnnotationControl">AnnotationControl</a></li><li><a href="api/ru/objects/Bone.html" id="Objects_Bone">Bone</a></li><li><a href="api/ru/objects/Group.html" id="Objects_Group">Group</a></li><li><a href="api/ru/objects/InstancedMesh.html" id="Objects_InstancedMesh">InstancedMesh</a></li><li><a href="api/ru/objects/Line.html" id="Objects_Line">Line</a></li><li><a href="api/ru/objects/LineLoop.html" id="Objects_LineLoop">LineLoop</a></li><li><a href="api/ru/objects/LineSegments.html" id="Objects_LineSegments">LineSegments</a></li><li><a href="api/ru/objects/LOD.html" id="Objects_LOD">LOD</a></li><li><a href="api/ru/objects/Mesh.html" id="Objects_Mesh">Mesh</a></li><li><a href="api/ru/objects/Points.html" id="Objects_Points">Points</a></li><li><a href="api/ru/objects/Skeleton.html" id="Objects_Skeleton">Skeleton</a></li><li><a href="api/ru/objects/SkinnedMesh.html" id="Objects_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/ru/objects/Sprite.html" id="Objects_Sprite">Sprite</a></li></ul></div><div><h2>Renderers</h2><ul id="Renderers"><li><a href="api/ru/renderers/WebGLMultisampleRenderTarget.html" id="Renderers_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/ru/renderers/RenderUtils.html" id="Renderers_RenderUtils">RenderUtils</a></li><li><a href="api/ru/renderers/WebGLRenderer.html" id="Renderers_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/ru/renderers/WebGLRenderTarget.html" id="Renderers_WebGLRenderTarget">WebGLRenderTarget</a></li><li><a href="api/ru/renderers/WebGLCubeRenderTarget.html" id="Renderers_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li></ul></div><div><h2>Renderers / Shaders</h2><ul id="Renderers_/_Shaders"><li><a href="api/ru/renderers/shaders/ShaderChunk.html" id="Renderers_/_Shaders_ShaderChunk">ShaderChunk</a></li><li><a href="api/ru/renderers/shaders/ShaderLib.html" id="Renderers_/_Shaders_ShaderLib">ShaderLib</a></li><li><a href="api/ru/renderers/shaders/UniformsLib.html" id="Renderers_/_Shaders_UniformsLib">UniformsLib</a></li><li><a href="api/ru/renderers/shaders/UniformsUtils.html" id="Renderers_/_Shaders_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>Scenes</h2><ul id="Scenes"><li><a href="api/ru/scenes/Fog.html" id="Scenes_Fog">Fog</a></li><li><a href="api/ru/scenes/FogExp2.html" id="Scenes_FogExp2">FogExp2</a></li><li><a href="api/ru/scenes/Scene.html" id="Scenes_Scene">Scene</a></li><li><a href="api/ru/scenes/SceneBackground.html" id="Scenes_SceneBackground">SceneBackground</a></li></ul></div><div><h2>Textures</h2><ul id="Textures"><li><a href="api/ru/textures/CanvasTexture.html" id="Textures_CanvasTexture">CanvasTexture</a></li><li><a href="api/ru/textures/CompressedTexture.html" id="Textures_CompressedTexture">CompressedTexture</a></li><li><a href="api/ru/textures/CubeTexture.html" id="Textures_CubeTexture">CubeTexture</a></li><li><a href="api/ru/textures/DataTexture.html" id="Textures_DataTexture">DataTexture</a></li><li><a href="api/ru/textures/DataTexture3D.html" id="Textures_DataTexture3D">DataTexture3D</a></li><li><a href="api/ru/textures/DepthTexture.html" id="Textures_DepthTexture">DepthTexture</a></li><li><a href="api/ru/textures/Texture.html" id="Textures_Texture">Texture</a></li><li><a href="api/ru/textures/VideoTexture.html" id="Textures_VideoTexture">VideoTexture</a></li></ul></div><div><h2>WebGLRenderer</h2><ul id="WebGLRenderer"><li><a href="api/ru/renderers/webgl/WebGLProgram.html" id="WebGLRenderer_WebGLProgram">WebGLProgram</a></li><li><a href="api/ru/renderers/webgl/WebGLShader.html" id="WebGLRenderer_WebGLShader">WebGLShader</a></li><li><a href="api/ru/renderers/webgl/WebGLState.html" id="WebGLRenderer_WebGLState">WebGLState</a></li></ul></div></div>
+        </nav>
+    <h1>WebGLRenderer</h1>
+
+    <p class="desc">
+      Рендерер WebGL отображает ваши великолепно выполненные сцены, используя
+      <a href="https://en.wikipedia.org/wiki/WebGL"  target="_blank">WebGL</a>.
+    </p>
+
+    <h2>Конструктор</h2>
+
+    <h3>WebGLRenderer(parameters : <a href="javascript:;" class="param">Object</a>)</h3>
+    <p>
+    <a href="javascript:;">parameters</a> - (необязательный) объект со свойствами, определяющими поведение рендерера.
+    Конструктор также не принимает никаких параметров. Во всех случаях он будет принимать разумные значения по умолчанию
+    если параметры отсутствуют. Ниже перечислены допустимые параметры:<br><br>
+
+    <a href="javascript:;">canvas</a> - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas"  target="_blank">canvas</a>
+    где рендерер выводит свои результат.
+    Это соответствует приведенному ниже свойству <a href="api/ru/renderers/WebGLRenderer.html#domElement">domElement</a>.
+    Если не передать этот параметр, будет создан новый элемент canvas.<br>
+
+
+    <a href="javascript:;">context</a> - Может быть использован для присоединения рендерера к существующему
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"  target="_blank">RenderingContext</a>.
+    По умолчанию null.<br>
+
+    <a href="javascript:;">precision</a> - Точность шейдера. Может быть <strong>"highp "</strong>, <strong>"mediump "</strong> или <strong>"lowp "</strong>.
+    По умолчанию <strong>"highp "</strong>, если поддерживается устройством. Смотрите заметку "Things to Avoid"
+    [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices здесь].<br>
+
+    <a href="javascript:;">alpha</a> - содержит ли canvas альфа-буфер (прозрачность) или нет.
+    По умолчанию <strong>false</strong>.<br>
+
+    <a href="javascript:;">premultipliedAlpha</a> - будет ли рендерер считать, что цвета имеют
+    <a href="https://en.wikipedia.org/wiki/Glossary_of_computer_graphics#Premultiplied_alpha"  target="_blank">premultiplied alpha</a>.
+    По умолчанию <strong>true</strong>.<br>
+
+    <a href="javascript:;">antialias</a> - выполнять ли сглаживание. По умолчанию <strong>false</strong>.<br>
+
+    <a href="javascript:;">stencil</a> - имеет ли буфер отрисовки
+    <a href="https://en.wikipedia.org/wiki/Stencil_buffer"  target="_blank">stencil buffer</a> как минимум 8 бит.
+    По умолчанию <strong>true</strong>.<br>
+
+    <a href="javascript:;">preserveDrawingBuffer</a> - сохранять ли буферы до тех пор, пока они не будут очищены вручную
+    или перезаписаны По умолчанию <strong>false</strong>.<br>
+
+    <a href="javascript:;">powerPreference</a> - Предоставляет агенту пользователя подсказку, указывающую, какая конфигурация GPU подходит для данного контекста WebGL.
+    Может быть <strong>"high-performance"</strong>, <strong>"low-power"</strong> или <strong>"default"</strong>. По умолчанию <strong>"default"</strong>.
+    См. <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2"  target="_blank">WebGL spec</a> для подробностей.<br>
+
+    <a href="javascript:;">failIfMajorPerformanceCaveat</a> - будет ли создание рендерера завершено при обнаружении низкой производительности. По умолчанию <strong>false</strong>.
+    См. <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2"  target="_blank">WebGL spec</a> для подробностей.<br>
+
+    <a href="javascript:;">depth</a> - имеет ли буфер отрисовки иметь
+    <a href="https://en.wikipedia.org/wiki/Z-buffering"  target="_blank">depth buffer</a> как минимум 16 бит.
+    По умолчанию <strong>true</strong>.<br>
+
+    <a href="javascript:;">logarithmicDepthBuffer</a> -  использовать ли логарифмический буфер глубины. может потребоваться при работе с большими различиями в масштабе в одной сцене.
+    Обратите внимание, что эта настройка использует gl_FragDepth, который отключает оптимизацию <a href="https://www.khronos.org/opengl/wiki/Early_Fragment_Test"  target="_blank">Early Fragment Test</a>
+    и может привести к снижению производительности.
+    По умолчанию <strong>false</strong>. Ознакомьтесь с примером <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_camera_logarithmicdepthbuffer"  target="_blank">camera / logarithmicdepthbuffer</a>.
+    </p>
+
+    <h2>Свойства</h2>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#autoClear" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#autoClear" id="autoClear">autoClear</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Определяет, должен ли рендерер автоматически очищать свой вывод перед рендерингом кадра.</p>
+
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#autoClearColor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#autoClearColor" id="autoClearColor">autoClearColor</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если <a href="api/ru/renderers/WebGLRenderer.html#autoClear">autoClear</a> равно true, определяет, должен ли рендерер очищать буфер цвета. По умолчанию <strong>true</strong>.
+    </p>
+
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#autoClearDepth" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#autoClearDepth" id="autoClearDepth">autoClearDepth</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если <a href="api/ru/renderers/WebGLRenderer.html#autoClear">autoClear</a> равно true, определяет, должен ли рендерер очищать буфер глубины. По умолчанию <strong>true</strong>.
+    </p>
+
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#autoClearStencil" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#autoClearStencil" id="autoClearStencil">autoClearStencil</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если <a href="api/ru/renderers/WebGLRenderer.html#autoClear">autoClear</a> равно true, определяет, должен ли рендерер очищать буфер стенсила. По умолчанию <strong>true</strong>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#debug" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#debug" id="debug.checkShaderErrors">debug.checkShaderErrors</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если <a href="api/ru/renderers/WebGLRenderer.html#checkShaderErrors">checkShaderErrors</a> равно true, определяет, проверяются ли программы шейдеров материалов на наличие ошибок в процессе компиляции и компоновки. Может быть полезно отключить эту проверку во время разработки для повышения производительности.
+      Настоятельно рекомендуется включать эти проверки во время разработки. 
+      Если шейдер не компилируется и не связывается - он не будет работать и связанный с ним материал не будет рендериться. 
+      По умолчанию <strong>true</strong>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#capabilities" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#capabilities" id="capabilities">capabilities</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Объект, содержащий подробную информацию о возможностях текущего <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"  target="_blank">RenderingContext</a>.<br>
+
+    - <a href="javascript:;">floatFragmentTextures</a>: поддерживает ли контекст расширение <a href="https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_float"  target="_blank">OES_texture_float</a>.
+      Согласно <a href="https://webglstats.com/"  target="_blank">WebGLStats</a>, по состоянию на февраль 2016 года более 95% устройств с поддержкой WebGL поддерживают эту функцию.<br>
+    - <a href="javascript:;">floatVertexTextures</a>: <strong>true</strong> если <a href="javascript:;">floatFragmentTextures</a> и <a href="javascript:;">vertexTextures</a> оба true.<br>
+    - <a href="javascript:;">getMaxAnisotropy</a>(): Возвращает максимальную доступную анизотропию.<br>
+    - <a href="javascript:;">getMaxPrecision</a>(): Возвращает максимальную доступную точность для вершинных и фрагментных шейдеров.<br>
+    - <a href="javascript:;">isWebGL2</a>: <strong>true</strong> если используемый контекст является объектом WebGL2RenderingContext.<br>
+    - <a href="javascript:;">logarithmicDepthBuffer</a>: <strong>true</strong> если <a href="javascript:;">logarithmicDepthBuffer</a> было установлено true в конструкторе и контекст поддерживает расширение<a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_frag_depth"  target="_blank">EXT_frag_depth</a>.
+      Согласно <a href="https://webglstats.com/"  target="_blank">WebGLStats</a>, по состоянию на февраль 2016 года около 66% устройств с поддержкой WebGL поддерживают эту функцию.<br>
+    - <a href="javascript:;">maxAttributes</a>: Значение <strong>gl.MAX_VERTEX_ATTRIBS</strong>.<br>
+    - <a href="javascript:;">maxCubemapSize</a>: Значение <strong>gl.MAX_CUBE_MAP_TEXTURE_SIZE</strong>.
+    Максимальная высота * ширина текстур карты куба, которые может использовать шейдер.<br>
+    - <a href="javascript:;">maxFragmentUniforms</a>: Значение <strong>gl.MAX_FRAGMENT_UNIFORM_VECTORS</strong>.
+    Количество uniform, которые может использовать фрагментный шейдер.<br>
+    - <a href="javascript:;">maxTextureSize</a>: Значение <strong>gl.MAX_TEXTURE_SIZE</strong>.
+    Максимальная высота * ширина текстуры, которую использует шейдер.<br>
+    - <a href="javascript:;">maxTextures</a>: Значение <strong>gl.MAX_TEXTURE_IMAGE_UNITS</strong>.
+    Максимальное количество текстур, которое может быть использовано шейдером.<br>
+    - <a href="javascript:;">maxVaryings</a>: Значение <strong>gl.MAX_VARYING_VECTORS</strong>.
+    Количество изменяющихся векторов, которые могут использоваться шейдерами.<br>
+    - <a href="javascript:;">maxVertexTextures</a>: Значение <strong>gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS</strong>.
+    Количество текстур, которые могут быть использованы в вершинном шейдере.<br>
+    - <a href="javascript:;">maxVertexUniforms</a>: Значение <strong>gl.MAX_VERTEX_UNIFORM_VECTORS</strong>.
+    Максимальное количество форм, которое может быть использовано в вершинном шейдере.<br>
+    - <a href="javascript:;">precision</a>: The shader precision currently being used by the renderer.<br>
+    - <a href="javascript:;">vertexTextures</a>: <strong>true</strong> если <a href="api/ru/renderers/WebGLRenderer.html#maxVertexTextures" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#maxVertexTextures" id="maxVertexTextures">maxVertexTextures</a>  : <a href="javascript:;" class="param">Integer</a>больше чем 0 (т.е. можно использовать вершинные текстуры).<br>
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#clippingPlanes" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#clippingPlanes" id="clippingPlanes">clippingPlanes</a>  : <a href="javascript:;" class="param">Array</a></h3>
+    <p>
+      Определяемые пользователем плоскости сечения, заданные как объекты v3d.Plane в мировом пространстве. Эти плоскости применяются глобально.Точки в пространстве, чье скалярное произведение с плоскостью отрицательно, отсекаются.  По умолчанию []. 
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#domElement" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#domElement" id="domElement">domElement</a>  : <a href="javascript:;" class="param">DOMElement</a></h3>
+    <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas"  target="_blank">canvas</a> где рендерер рисует свой вывод.<br>
+    Он автоматически создается рендерером в конструкторе (если он еще не создан); вам просто нужно добавить его на вашу страницу, как показано ниже:<br>
+    <code>
+      document.body.appendChild(renderer.domElement);
+    </code>
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#extensions" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#extensions" id="extensions">extensions</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Обертка для метода <a href="api/ru/renderers/WebGLRenderer.html#extensions">.extensions.get</a>, используемого для проверки поддержки различных расширений WebGL.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#gammaFactor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#gammaFactor" id="gammaFactor">gammaFactor</a>  : <a href="javascript:;" class="param">Float</a></h3>
+    <p>По умолчанию <strong>2</strong>. </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#outputEncoding" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#outputEncoding" id="outputEncoding">outputEncoding</a>  : <a href="javascript:;" class="param">number</a></h3>
+    <p>Определяет выходную кодировку рендерера. По умолчанию <a href="api/ru/constants/Textures.html">v3d.LinearEncoding</a>.</p>
+    <p>Если цель рендеринга была установлена с помощью <a href="api/ru/renderers/WebGLRenderer.html#setRenderTarget">.setRenderTarget</a>, то вместо нее будет использоваться renderTarget.texture.encoding.</p>
+    <p>Подробности о других форматах смотрите на странице <a href="api/ru/constants/Textures.html">texture constants</a>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#info" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#info" id="info">info</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>Объект, содержащий ряд статистических сведений о памяти графической карты и процессе рендеринга. Полезен для отладки или просто как дополнительная информация. Объект содержит следующие поля:</p>
+    <p>
+    </p><ul>
+      <li>memory:
+        <ul>
+          <li>geometries</li>
+          <li>textures</li>
+        </ul>
+      </li>
+      <li>render:
+        <ul>
+          <li>calls</li>
+          <li>triangles</li>
+          <li>points</li>
+          <li>lines</li>
+          <li>frame</li>
+        </ul>
+      </li>
+      <li>programs
+      </li>
+    </ul>
+    <p></p>
+    <p>По умолчанию эти данные сбрасываются при каждом вызове рендеринга, но при наличии нескольких проходов рендеринга на кадр (например, при использовании постобработки) может быть предпочтительнее сбрасывать данные с помощью пользовательского шаблона. Сначала установите <strong>autoReset</strong> в значение <strong>false</strong>.
+    <code>
+    renderer.info.autoReset = false;
+    </code>
+    Вызывайте <strong>reset()</strong> каждый раз, когда вы закончили рендеринг одного кадра.
+    <code>
+    renderer.info.reset();
+    </code>
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#localClippingEnabled" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#localClippingEnabled" id="localClippingEnabled">localClippingEnabled</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Определяет, соблюдает ли рендерер плоскости обтравки на уровне объекта. По умолчанию <strong>false</strong>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#maxMorphTargets" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#maxMorphTargets" id="maxMorphTargets">maxMorphTargets</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+    <p>
+    <!-- Verge3D -->
+    По умолчанию 12. Максимальное количество целей MorphTargets, допустимое в шейдере. Следует помнить, что стандартные материалы допускают только 12 целей MorphTargets.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#maxMorphNormals" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#maxMorphNormals" id="maxMorphNormals">maxMorphNormals</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+    <p>
+    <!-- Verge3D -->
+    По умолчанию - 6. Максимальное количество MorphNormals, допустимое в шейдере. Следует помнить, что стандартные материалы допускают только 6 MorphNormals.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#physicallyCorrectLights" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#physicallyCorrectLights" id="physicallyCorrectLights">physicallyCorrectLights</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Использовать ли режим физически корректного освещения. По умолчанию <strong>false</strong>.
+      Смотрите пример <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_lights_physical"  target="_blank">lights / physical</a>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#properties" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#properties" id="properties">properties</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Используется внутри рендерера для отслеживания различных свойств саб-объектов.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#renderLists" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#renderLists" id="renderLists">renderLists</a>  : <a href="javascript:;" class="param">WebGLRenderLists</a></h3>
+    <p>
+      Используется внутренне для обработки упорядочивания рендеринга объектов сцены.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#shadowMap" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#shadowMap" id="shadowMap">shadowMap</a>  : <a href="javascript:;" class="param">WebGLShadowMap</a></h3>
+    <p>
+      Содержит ссылку на карту теней, если она используется.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#shadowMap" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#shadowMap" id="shadowMap.enabled">shadowMap.enabled</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Если задано, используйте карты теней в сцене. По умолчанию <strong>false</strong>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#shadowMap" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#shadowMap" id="shadowMap.autoUpdate">shadowMap.autoUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Включает автоматическое обновление теней в сцене. По умолчанию <strong>true</strong>.</p>
+    <p>Если вам не требуется динамическое освещение/тени, вы можете установить значение <strong>false</strong> при инстанцировании рендерера.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#shadowMap" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#shadowMap" id="shadowMap.needsUpdate">shadowMap.needsUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Если установлено значение <strong>true</strong>, карты теней в сцене будут обновлены в следующем вызове <strong>render</strong>. По умолчанию <strong>false</strong>. </p>
+    <p>Если вы отключили автоматическое обновление карт теней (<strong>shadowMap.autoUpdate = false</strong>), вам нужно установить значение <strong>true</strong> и затем выполнить вызов рендеринга для обновления теней в вашей сцене.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#shadowMap" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#shadowMap" id="shadowMap.type">shadowMap.type</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+    <!-- Verge3D -->
+    <p>Определяет тип карты теней (нефильтрованная, фильтрация с процентным приближением, фильтрация с процентным приближением с билинейной фильтрацией в шейдере, экспоненциальное отображение теней с гауссовым размытием).</p>
+    <p>Варианты: v3d.BasicShadowMap, v3d.PCFShadowMap (по умолчанию), v3d.PCFSoftShadowMap, v3d.ESMShadowMap, v3d.PCFShadowMapPoissonDisk. Подробности смотрите в <a href="api/ru/constants/Renderer.html">Renderer constants</a>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#sortObjects" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#sortObjects" id="sortObjects">sortObjects</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Определяет, должен ли рендерер сортировать объекты. По умолчанию <strong>true</strong>.<br><br>
+
+    Примечание: Сортировка используется для того, чтобы попытаться правильно отобразить объекты, имеющие некоторую степень прозрачности. По определению, сортировка объектов может работать не во всех случаях. В зависимости от потребностей приложения, может потребоваться отключить сортировку и использовать другие методы для работы с рендерингом прозрачности, например, вручную определять порядок рендеринга каждого объекта.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#state" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#state" id="state">state</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Содержит функции для установки различных свойств состояния <a href="api/ru/renderers/WebGLRenderer.html#context">WebGLRenderer.context</a>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#toneMapping" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#toneMapping" id="toneMapping">toneMapping</a>  : <a href="javascript:;" class="param">Constant</a></h3>
+    <p>
+      По умолчанию <a href="api/ru/constants/Renderer.html">NoToneMapping</a>. Другие варианты смотрите в <a href="api/ru/constants/Renderer.html">Renderer constants</a>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#toneMappingExposure" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#toneMappingExposure" id="toneMappingExposure">toneMappingExposure</a>  : <a href="javascript:;" class="param">Number</a></h3>
+    <p>
+      Уровень экспозиции тонального маппинга. По умолчанию <strong>1</strong>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#xr" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#xr" id="xr">xr</a>  : <a href="javascript:;" class="param">WebXRManager</a></h3>
+    <p>
+      Предоставляет доступ к связанному с WebXR <a href="javascript:;">interface</a> рендереру.
+    </p>
+
+    <h2>Методы</h2>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#clear" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#clear" id="clear">clear</a> (color : <a href="javascript:;" class="param">Boolean</a>, depth : <a href="javascript:;" class="param">Boolean</a>, stencil : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Дает команду рендереру очистить буфер(ы) цвета, глубины или трафаретного рисунка. Этот метод инициализирует буфер цвета текущим значением clear color.
+       <br>
+       Аргументы по умолчанию имеют значение <strong>true</strong>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#clearColor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#clearColor" id="clearColor">clearColor</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Очистить цветовой буфер. Эквивалентно вызову <a href="api/ru/renderers/WebGLRenderer.html#clear">.clear</a>(true, false, false).</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#clearDepth" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#clearDepth" id="clearDepth">clearDepth</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Очистить буфер глубины. Эквивалентно вызову <a href="api/ru/renderers/WebGLRenderer.html#clear">.clear</a>(false, true, false).</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#clearStencil" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#clearStencil" id="clearStencil">clearStencil</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Очистить буферы стенсилов. Эквивалентно вызову <a href="api/ru/renderers/WebGLRenderer.html#clear">.clear</a>(false, false, true).</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#compile" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#compile" id="compile">compile</a> (scene : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, camera : <a href="api/ru/cameras/Camera.html" class="param">Camera</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Компилирует все материалы в сцене с камерой. Это полезно для предварительной компиляции шейдеров перед первым рендерингом.</p>
+
+    <!-- Verge3D method -->
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#compileAsync" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#compileAsync" id="compileAsync">compileAsync</a> (scene : <a href="api/ru/scenes/Scene.html" class="param">Scene</a>, camera : <a href="api/ru/cameras/Camera.html" class="param">Camera</a>, progressCb : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Асинхронно компилирует все материалы в сцене с камерой. Это полезно для предварительной компиляции шейдеров перед первым рендерингом. Дополнительная функция <strong>progressCb</strong> получает параметр <strong>percentage</strong>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#copyFramebufferToTexture" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#copyFramebufferToTexture" id="copyFramebufferToTexture">copyFramebufferToTexture</a> (position : <a href="api/ru/math/Vector2.html" class="param">Vector2</a>, texture : <a href="api/ru/textures/Texture.html" class="param">Texture</a>, level : <a href="javascript:;" class="param">Number</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Копирует пиксели из текущего WebGLFramebuffer в 2D текстуру. Позволяет получить доступ к <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D"  target="_blank">WebGLRenderingContext.copyTexImage2D</a>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#copyTextureToTexture" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#copyTextureToTexture" id="copyTextureToTexture">copyTextureToTexture</a> (position : <a href="api/ru/math/Vector2.html" class="param">Vector2</a>, srcTexture : <a href="api/ru/textures/Texture.html" class="param">Texture</a>, dstTexture : <a href="api/ru/textures/Texture.html" class="param">Texture</a>, level : <a href="javascript:;" class="param">Number</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Копирует все пиксели текстуры в существующую текстуру, начиная с заданной позиции. Позволяет получить доступ к <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D"  target="_blank">WebGLRenderingContext.texSubImage2D</a>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#dispose" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#dispose" id="dispose">dispose</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Удаление текущего контекста рендеринга.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#extensions" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#extensions" id="extensions.get">extensions.get</a> (extensionName : <a href="javascript:;" class="param">String</a>) : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Используется для проверки поддержки различных расширений и возвращает объект с подробной информацией о расширении, если оно доступно.
+      Этот метод может проверить наличие следующих расширений:<br><br>
+
+    - <strong>WEBGL_depth_texture</strong><br>
+    - <strong>EXT_texture_filter_anisotropic</strong><br>
+    - <strong>WEBGL_compressed_texture_s3tc</strong><br>
+    - <strong>WEBGL_compressed_texture_pvrtc</strong><br>
+    - <strong>WEBGL_compressed_texture_etc1</strong>
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#forceContextLoss" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#forceContextLoss" id="forceContextLoss">forceContextLoss</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Имитация потери контекста WebGL. Для этого требуется поддержка расширения
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context"  target="_blank">WEBGL_lose_context</a>.
+      Согласно <a href="https://webglstats.com/"  target="_blank">WebGLStats</a>, по состоянию на февраль 2016 года 90% устройств с поддержкой WebGL поддерживают его.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getClearAlpha" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getClearAlpha" id="getClearAlpha">getClearAlpha</a> () : <a href="javascript:;" class="param">Float</a></h3>
+    <p>Возвращает <a href="javascript:;">float</a> с текущей чистой альфой. Диапазон от 0 до 1.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getClearColor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getClearColor" id="getClearColor">getClearColor</a> (target : <a href="api/ru/math/Color.html" class="param">Color</a>) : <a href="api/ru/math/Color.html" class="param">Color</a></h3>
+    <p>Возвращает экземпляр <a href="api/ru/math/Color.html">v3d.Color</a> с текущим цветом прозрачности.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getContext" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getContext" id="getContext">getContext</a> () : <a href="javascript:;" class="param">WebGLRenderingContext</a></h3>
+    <p>Возвращает текущий контекст WebGL.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getContextAttributes" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getContextAttributes" id="getContextAttributes">getContextAttributes</a> () : <a href="javascript:;" class="param">WebGLContextAttributes</a></h3>
+    <p>Возвращает объект, описывающий атрибуты, установленные для контекста WebGL при его создании.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getActiveCubeFace" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getActiveCubeFace" id="getActiveCubeFace">getActiveCubeFace</a> () : <a href="javascript:;" class="param">Integer</a></h3>
+    <p>Возвращает текущую активную грань куба.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getActiveMipmapLevel" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getActiveMipmapLevel" id="getActiveMipmapLevel">getActiveMipmapLevel</a> () : <a href="javascript:;" class="param">Integer</a></h3>
+    <p>Возвращает текущий активный уровень mipmap.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getRenderTarget" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getRenderTarget" id="getRenderTarget">getRenderTarget</a> () : <a href="javascript:;" class="param">RenderTarget</a></h3>
+    <p>Возвращает текущую <a href="javascript:;">RenderTarget</a>, если она есть; в противном случае возвращает <strong>null</strong>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getCurrentViewport" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getCurrentViewport" id="getCurrentViewport">getCurrentViewport</a> (target : <a href="api/ru/math/Vector4.html" class="param">Vector4</a>) : <a href="api/ru/math/Vector4.html" class="param">Vector4</a></h3>
+    <p>
+    <a href="api/ru/math/Vector4.html">target</a> — результат будет скопирован в этот Vector4.<br><br>
+
+    Возвращает текущий видовой экран.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getDrawingBufferSize" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getDrawingBufferSize" id="getDrawingBufferSize">getDrawingBufferSize</a> (target : <a href="api/ru/math/Vector2.html" class="param">Vector2</a>) : <a href="api/ru/math/Vector2.html" class="param">Vector2</a></h3>
+    <p>
+    <a href="api/ru/math/Vector2.html">target</a> — результат будет скопирован в этот Vector2.<br><br>
+
+    Возвращает ширину и высоту буфера отрисовки рендерера, в пикселях.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getPixelRatio" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getPixelRatio" id="getPixelRatio">getPixelRatio</a> () : <a href="javascript:;" class="param">number</a></h3>
+    <p>Возвращает текущее используемое соотношение пикселей устройства.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getScissor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getScissor" id="getScissor">getScissor</a> (target : <a href="api/ru/math/Vector4.html" class="param">Vector4</a>) : <a href="api/ru/math/Vector4.html" class="param">Vector4</a></h3>
+    <p>
+    <a href="api/ru/math/Vector4.html">target</a> — результат будет скопирован в этот Vector4.<br><br>
+
+    Возвращает область ножниц.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getScissorTest" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getScissorTest" id="getScissorTest">getScissorTest</a> () : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Возвращает <strong>true</strong>, если тест ножниц включен; возвращает <strong>false</strong> в противном случае.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getSize" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getSize" id="getSize">getSize</a> (target : <a href="api/ru/math/Vector2.html" class="param">Vector2</a>) : <a href="api/ru/math/Vector2.html" class="param">Vector2</a></h3>
+    <p>
+    <a href="api/ru/math/Vector2.html">target</a> — результат будет скопирован в этот Vector2.<br><br>
+
+    Возвращает ширину и высоту выходного холста рендерера, в пикселях.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#getViewport" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#getViewport" id="getViewport">getViewport</a> (target : <a href="api/ru/math/Vector4.html" class="param">Vector4</a>) : <a href="api/ru/math/Vector4.html" class="param">Vector4</a></h3>
+    <p>
+    <a href="api/ru/math/Vector4.html">target</a> — результат будет скопирован в этот Vector4.<br><br>
+
+    Возвращает область просмотра.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#initTexture" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#initTexture" id="initTexture">initTexture</a> (texture : <a href="api/ru/textures/Texture.html" class="param">Texture</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p> Инициализирует заданную текстуру. Полезно для предварительной загрузки текстуры вместо ожидания первого рендера (который может вызвать заметные задержки из-за накладных расходов на декодирование и загрузку GPU).</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#resetGLState" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#resetGLState" id="resetGLState">resetGLState</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Сброс состояния GL на значение по умолчанию. Вызывается внутренне, если контекст WebGL потерян.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#readRenderTargetPixels" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#readRenderTargetPixels" id="readRenderTargetPixels">readRenderTargetPixels</a> (renderTarget : <a href="api/ru/renderers/WebGLRenderTarget.html" class="param">WebGLRenderTarget</a>, x : <a href="javascript:;" class="param">Float</a>, y : <a href="javascript:;" class="param">Float</a>, width : <a href="javascript:;" class="param">Float</a>, height : <a href="javascript:;" class="param">Float</a>, buffer : <a href="javascript:;" class="param">TypedArray</a>, activeCubeFaceIndex : <a href="javascript:;" class="param">Integer</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>buffer - Uint8Array - единственный тип назначения, поддерживаемый во всех случаях, другие типы зависят от renderTarget и платформы. Подробности смотрите в <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12"  target="_blank">WebGL spec</a>.</p>
+    <p>Считывает пиксельные данные из renderTarget в переданный вам буфер. Это обертка вокруг <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels"  target="_blank">WebGLRenderingContext.readPixels</a>().</p>
+    <p>Смотрите пример <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_interactive_cubes_gpu"  target="_blank">interactive / cubes / gpu</a>.</p>
+    <p>Для считывания <a href="api/ru/renderers/WebGLCubeRenderTarget.html">WebGLCubeRenderTarget</a> используйте необязательный параметр activeCubeFaceIndex, чтобы определить, какая грань должна быть считана.</p>
+
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#render" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#render" id="render">render</a> (scene : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, camera : <a href="api/ru/cameras/Camera.html" class="param">Camera</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Рендеринг <a href="api/ru/scenes/Scene.html">scene</a> или другого типа <a href="api/ru/core/Object3D.html">object</a> с помощью <a href="api/ru/cameras/Camera.html">camera</a>.<br>
+
+      Рендеринг выполняется на ранее указанную <a href="api/ru/renderers/WebGLRenderTarget.html">renderTarget</a>, установленную вызовом <a href="api/ru/renderers/WebGLRenderer.html#setRenderTarget">.setRenderTarget</a> или на холст, как обычно.<br>
+
+      По умолчанию буферы рендеринга очищаются перед рендерингом, но вы можете предотвратить это, установив свойство <a href="api/ru/renderers/WebGLRenderer.html#autoClear">autoClear</a> в false.
+      Если вы хотите предотвратить очистку только определенных буферов, вы можете установить для свойств <a href="api/ru/renderers/WebGLRenderer.html#autoClearColor">autoClearColor</a>, <a href="api/ru/renderers/WebGLRenderer.html#autoClearStencil">autoClearStencil</a> или <a href="api/ru/renderers/WebGLRenderer.html#autoClearDepth">autoClearDepth</a> значение false. Чтобы принудительно очистить один или несколько буферов, вызовите <a href="api/ru/renderers/WebGLRenderer.html#clear">.clear</a>.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#renderBufferDirect" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#renderBufferDirect" id="renderBufferDirect">renderBufferDirect</a> (camera : <a href="api/ru/cameras/Camera.html" class="param">Camera</a>, fog : <a href="api/ru/scenes/Fog.html" class="param">Fog</a>, geometry : <a href="api/ru/core/Geometry.html" class="param">Geometry</a>, material : <a href="api/ru/materials/Material.html" class="param">Material</a>, object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, group : <a href="javascript:;" class="param">Object</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Рендеринг группы геометрии буфера с использованием камеры и с указанным материалом.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#renderBufferImmediate" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#renderBufferImmediate" id="renderBufferImmediate">renderBufferImmediate</a> (object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, program : <a href="api/ru/renderers/webgl/WebGLProgram.html" class="param">WebGLProgram</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>object - экземпляр <a href="api/ru/core/Object3D.html">Object3D</a><br>
+    program - экземпляр  <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a><br>
+
+    Рендерит экземпляр <a href="api/ru/extras/objects/ImmediateRenderObject.html">ImmediateRenderObject</a>. Вызывается функцией renderObjectImmediate().
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#resetState" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#resetState" id="resetState">resetState</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>Может использоваться для сброса внутреннего состояния WebGL. Этот метод наиболее актуален для приложений, которые используют один контекст WebGL в нескольких библиотеках WebGL.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setAnimationLoop" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setAnimationLoop" id="setAnimationLoop">setAnimationLoop</a> (callback : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p><a href="javascript:;">callback</a> — Функция будет вызываться каждый доступный кадр. Если передано `null`, это остановит любую уже идущую анимацию.</p>
+    <p>Встроенная функция, которая может быть использована вместо <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame"  target="_blank">requestAnimationFrame</a>. Для проектов WebXR необходимо использовать эту функцию.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setClearAlpha" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setClearAlpha" id="setClearAlpha">setClearAlpha</a> (alpha : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Устанавливает прозрачную альфу. В качестве входного значения может быть использовано число в диапазоне от <strong>0.0</strong> до <strong>1.0</strong>.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setClearColor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setClearColor" id="setClearColor">setClearColor</a> (color : <a href="api/ru/math/Color.html" class="param">Color</a>, alpha : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Устанавливает прозрачный цвет и непрозрачность.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setFramebuffer" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setFramebuffer" id="setFramebuffer">setFramebuffer</a> (value : <a href="javascript:;" class="param">WebGLFramebuffer</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Устанавливает заданный WebGLFramebuffer. Этот метод можно использовать, только если цель рендеринга не установлена через <a href="api/ru/renderers/WebGLRenderer.html#setRenderTarget">.setRenderTarget</a>().</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setPixelRatio" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setPixelRatio" id="setPixelRatio">setPixelRatio</a> (value : <a href="javascript:;" class="param">number</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>Устанавливает соотношение пикселей устройства. Обычно используется для устройств с высоким разрешением, чтобы предотвратить смазывание холста при выводе.</p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setRenderTarget" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setRenderTarget" id="setRenderTarget">setRenderTarget</a> (renderTarget : <a href="api/ru/renderers/WebGLRenderTarget.html" class="param">WebGLRenderTarget</a>, activeCubeFace : <a href="javascript:;" class="param">Integer</a>, activeMipmapLevel : <a href="javascript:;" class="param">Integer</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      renderTarget -- <a href="api/ru/renderers/WebGLRenderTarget.html">renderTarget</a>, который должен быть активирован. Если задано значение <strong>null</strong>, то вместо него в качестве активной цели рендеринга устанавливается холст.<br>
+      activeCubeFace -- Указывает активную сторону куба (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) <a href="api/ru/renderers/WebGLCubeRenderTarget.html">WebGLCubeRenderTarget</a> (необязательно).<br>
+      activeMipmapLevel -- Указывает активный уровень mipmap (необязательно).<br><br>
+      Этот метод устанавливает активный объект рендеринга.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setScissor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setScissor" id="setScissor">setScissor</a> (x : <a href="javascript:;" class="param">Integer</a>, y : <a href="javascript:;" class="param">Integer</a>, width : <a href="javascript:;" class="param">Integer</a>, height : <a href="javascript:;" class="param">Integer</a>) : <a href="javascript:;" class="param">null</a><br>
+    <a href="api/ru/renderers/WebGLRenderer.html#setScissor" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setScissor" id="setScissor">setScissor</a> (vector : <a href="api/ru/math/Vector4.html" class="param">Vector4</a>) : <a href="javascript:;" class="param">null</a></h3>
+
+    <p>
+      Параметры x, y, ширины и высоты области ножниц.<br>
+      Опционально, 4-компонентный вектор, определяющий параметры региона.<br><br>
+
+      Устанавливает область ножниц от (x, y) до (x + ширина, y + высота).<br>
+      (x, y) - левый нижний угол области ножниц.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setScissorTest" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setScissorTest" id="setScissorTest">setScissorTest</a> (boolean : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Включите или отключите проверку ножниц. Если этот параметр включен, только пиксели в пределах определенной области будут затронуты дальнейшими действиями рендеринга.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setOpaqueSort" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setOpaqueSort" id="setOpaqueSort">setOpaqueSort</a> (method : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Устанавливает пользовательскую функцию непрозрачной сортировки для WebGLRenderLists. Передайте null, чтобы использовать функцию по умолчанию painterSortStable.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setTransparentSort" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setTransparentSort" id="setTransparentSort">setTransparentSort</a> (method : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Устанавливает пользовательскую прозрачную функцию сортировки для WebGLRenderLists. Передайте null, чтобы использовать функцию по умолчанию reversePainterSortStable.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setSize" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setSize" id="setSize">setSize</a> (width : <a href="javascript:;" class="param">Integer</a>, height : <a href="javascript:;" class="param">Integer</a>, updateStyle : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      Изменяет размер выводимого холста до (ширина, высота) с учетом соотношения пикселей устройства, а также устанавливает область просмотра в соответствии с этим размером, начиная с (0, 0).
+      Установка <a href="javascript:;">updateStyle</a> в false предотвращает любые изменения стиля выводимого холста.
+    </p>
+
+    <h3><a href="api/ru/renderers/WebGLRenderer.html#setViewport" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setViewport" id="setViewport">setViewport</a> (x : <a href="javascript:;" class="param">Integer</a>, y : <a href="javascript:;" class="param">Integer</a>, width : <a href="javascript:;" class="param">Integer</a>, height : <a href="javascript:;" class="param">Integer</a>) : <a href="javascript:;" class="param">null</a><br>
+    <a href="api/ru/renderers/WebGLRenderer.html#setViewport" class="permalink">#</a> .<a href="api/ru/renderers/WebGLRenderer.html#setViewport" id="setViewport">setViewport</a> (vector : <a href="api/ru/math/Vector4.html" class="param">Vector4</a>) : <a href="javascript:;" class="param">null</a></h3>
+
+    <p>
+      Параметры x, y, ширины и высоты области просмотра.<br>
+      Опционально, 4-компонентный вектор, задающий параметры видового экрана.<br><br>
+
+      Устанавливает область просмотра для рендеринга из (x, y) в (x + ширина, y + высота).<br>
+      (x, y) - левый нижний угол области.
+    </p>
+
+    <h2>Исходный файл</h2><p>О том как получить исходный код этого модуля читайте <a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html">тут</a>.</p>
+  
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <div class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">Soft8Soft – трёхмерные решения для сайтов</a><div>Последнее обновление: 28 марта 2022 г.</div></div></body></html>

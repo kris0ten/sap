@@ -1,0 +1,896 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="590" scrolly="309.49999999999994" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="1275.0332697205804" scrolly="291.66808286131266" scale="0.6768393620286867">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="Z]|IZUma8Mo~2;~4L7:i" type="">newpiece</variable>
+      <variable id="}5_M]g.OtiKy8QXR`,m," type="">i</variable>
+      <variable id="Qpk{!(%rMClnVkBaE(57" type="">j</variable>
+      <variable id="oM3tTn_k`+h.NXLh)w`t" type="">list1</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="0#^O$?u%TQm/p0}TVj{K" x="-1930" y="-490">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Itb*3Q4=h;w^d2P;~?:W">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="$:C}m]Q6@Kk$qCazt.H%" x="-1450" y="-510">
+      <value name="VALUE">
+        <shadow type="objectList" id="##66VZYl_8JcysQg.^a;">
+          <field name="FIELDNAME">Rect block</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="hide" id=":LBE_M@}^pNEf{mG)d/_">
+          <value name="VALUE">
+            <shadow type="objectList" id="j:K_,+{}LYM1$GQ26{)z">
+              <field name="FIELDNAME">Square block</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="hide" id="K)SsU`u*.8Xft#XZ@-pO">
+              <value name="VALUE">
+                <shadow type="objectList" id="SAWb#+Q--.kid,Dz3%Mz">
+                  <field name="FIELDNAME">Two stud</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="variables_set" id="CJUv!~=BGm_9q/-${B-9">
+                  <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                  <value name="VALUE">
+                    <block type="lists_create_empty" id="66Qzpbd-H=QdFzUM=pDG"/>
+                  </value>
+                  <next>
+                    <block type="eventHTMLElem" id="XeT2;uqaH{,C/Q?YL9BQ">
+                      <field name="EVENT">click</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="ID">
+                        <shadow type="text" id="SBfh$j=h3[9U@Z!o`W4.">
+                          <field name="TEXT">piece1</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="lists_setIndex" id="f%,;Yk}=axCle[$/*LQy">
+                          <mutation at="false"/>
+                          <field name="MODE">INSERT</field>
+                          <field name="WHERE">LAST</field>
+                          <value name="LIST">
+                            <block type="variables_get" id="|}DPNXJ;%6jz#VSz[JkH">
+                              <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="variables_get" id="X1DQ;}!yl:gKTsH!#Zm+">
+                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" id="I@+3/3J;+]PXxL;dnxGF">
+                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                              <value name="VALUE">
+                                <block type="cloneObject" id="IpQ-0#r|bjM;4HbaRNlj">
+                                  <value name="OBJECTINPUT">
+                                    <shadow type="objectList" id="#@[p6qR6S0l2an45EVUU">
+                                      <field name="FIELDNAME">Two stud</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="show" id="(Sbi~QB8+|q?FA4A!ozV">
+                                  <value name="VALUE">
+                                    <shadow type="objectList" id="VYF(n$L6lu3CBbYgybl2">
+                                      <field name="FIELDNAME">Two stud</field>
+                                    </shadow>
+                                    <block type="variables_get" id="q(-*E64R)_;Zu|pjwc1T">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="whenDraggedOver" id="4^=,E$!G]u+/WVKje%#q">
+                                      <field name="X_RAY">FALSE</field>
+                                      <field name="LEFT_BUTTON">TRUE</field>
+                                      <field name="MIDDLE_BUTTON">TRUE</field>
+                                      <field name="RIGHT_BUTTON">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="objectList" id="P%0{jmH#=e=P!/dMK}M-">
+                                          <field name="FIELDNAME">Rect block</field>
+                                        </shadow>
+                                        <block type="variables_get" id=".[FqJ9}Q`B^YZ2/:jBJs">
+                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO_MOVE">
+                                        <block type="dragMove" id="Nw6|YjS~7Ni68|P-o=Os">
+                                          <field name="MODE">XYZ</field>
+                                          <value name="TARGETOBJ">
+                                            <shadow type="objectList" id="AE14mp`pYM-7F^O=PR*q">
+                                              <field name="FIELDNAME">Rect block</field>
+                                            </shadow>
+                                            <block type="variables_get" id="JtoQvS9tPBPQZ5H6l3D.">
+                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="eventHTMLElem" id="mCv08V(tR)V-y%}@~`vz">
+                          <field name="EVENT">click</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="ID">
+                            <shadow type="text" id="IJW;dOzSn2},_@-FBBEb">
+                              <field name="TEXT">piece2</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="lists_setIndex" id="(v%smD|Vi;;|H-lO-T]l">
+                              <mutation at="false"/>
+                              <field name="MODE">INSERT</field>
+                              <field name="WHERE">LAST</field>
+                              <value name="LIST">
+                                <block type="variables_get" id="s|T+,8b~OH*;i^qa%uW:">
+                                  <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="variables_get" id="2RW*szk`.O9PHMp~j+Re">
+                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set" id="N1?FSqEqS?O14mJ,s;n}">
+                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                  <value name="VALUE">
+                                    <block type="cloneObject" id="/[PNSaw$u/|#pH2oYIFA">
+                                      <value name="OBJECTINPUT">
+                                        <shadow type="objectList" id="yuCZrAsku4+W}PRyzi1G">
+                                          <field name="FIELDNAME">Square block</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="show" id="?/ADyjwB1o)sY!6j@kJM">
+                                      <value name="VALUE">
+                                        <shadow type="objectList">
+                                          <field name="FIELDNAME">Two stud</field>
+                                        </shadow>
+                                        <block type="variables_get" id="QTfus3j6O#2oM2F9`xS@">
+                                          <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="whenDraggedOver" id="D4s$SgAX/^A:(4Q[X8%-">
+                                          <field name="X_RAY">FALSE</field>
+                                          <field name="LEFT_BUTTON">TRUE</field>
+                                          <field name="MIDDLE_BUTTON">TRUE</field>
+                                          <field name="RIGHT_BUTTON">TRUE</field>
+                                          <value name="VALUE">
+                                            <shadow type="objectList">
+                                              <field name="FIELDNAME">Rect block</field>
+                                            </shadow>
+                                            <block type="variables_get" id="O~GrpuE|9/JhUn|?},`0">
+                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                            </block>
+                                          </value>
+                                          <statement name="DO_MOVE">
+                                            <block type="dragMove" id="X6]36x]/p+esuSJ,zQKB">
+                                              <field name="MODE">XYZ</field>
+                                              <value name="TARGETOBJ">
+                                                <shadow type="objectList">
+                                                  <field name="FIELDNAME">Rect block</field>
+                                                </shadow>
+                                                <block type="variables_get" id="Mmol2!H(5X[Z6t6CyuOL">
+                                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="eventHTMLElem" id="X`3p05ReN55+rY3Y_]nC">
+                              <field name="EVENT">click</field>
+                              <field name="PARENT">TRUE</field>
+                              <value name="ID">
+                                <shadow type="text" id="4`R]+rd]AY7Oqoe,a[Xt">
+                                  <field name="TEXT">piece3</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="lists_setIndex" id="PQ_dz2z,W!aozA=j%qE1">
+                                  <mutation at="false"/>
+                                  <field name="MODE">INSERT</field>
+                                  <field name="WHERE">LAST</field>
+                                  <value name="LIST">
+                                    <block type="variables_get" id="FJkWU,3nZHinP~o(I7_H">
+                                      <field name="VAR" id="oM3tTn_k`+h.NXLh)w`t">list1</field>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="variables_get" id="@iX:44qw7a)MRKMsC66,">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="-EM8V![zeX1;p_8N6nZf">
+                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                      <value name="VALUE">
+                                        <block type="cloneObject" id="phCDgsR?N~-(N0OV6Xm]">
+                                          <value name="OBJECTINPUT">
+                                            <shadow type="objectList" id="k;5^cWg!QUf56Xb/A4Gb">
+                                              <field name="FIELDNAME">Rect block</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="show" id="Ua7C;HK3i77n?)c,4q=d">
+                                          <value name="VALUE">
+                                            <shadow type="objectList">
+                                              <field name="FIELDNAME">Two stud</field>
+                                            </shadow>
+                                            <block type="variables_get" id="cm(;WK_3kNlty_zAW]p5">
+                                              <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="whenDraggedOver" id="*_..P.q4y?!U?,t7fcRc">
+                                              <field name="X_RAY">FALSE</field>
+                                              <field name="LEFT_BUTTON">TRUE</field>
+                                              <field name="MIDDLE_BUTTON">TRUE</field>
+                                              <field name="RIGHT_BUTTON">TRUE</field>
+                                              <value name="VALUE">
+                                                <shadow type="objectList">
+                                                  <field name="FIELDNAME">Rect block</field>
+                                                </shadow>
+                                                <block type="variables_get" id="6sX@NFIr(];wEgfT*XGE">
+                                                  <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                </block>
+                                              </value>
+                                              <statement name="DO_MOVE">
+                                                <block type="dragMove" id="H7Rc}3[Qi]|{n4ly,k[q">
+                                                  <field name="MODE">XYZ</field>
+                                                  <value name="TARGETOBJ">
+                                                    <shadow type="objectList">
+                                                      <field name="FIELDNAME">Rect block</field>
+                                                    </shadow>
+                                                    <block type="variables_get" id=":xL+~u*MFC5aF|nBxOSr">
+                                                      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="Q!)z%0h)j_mAD+tfW[W2" x="-1950" y="-310">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text" id="F2OE:udoHt6{pmbAp.l{">
+          <field name="TEXT"/>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="tdyEpM#fqf1(#y}#Xjse" x="-1930" y="-170">
+      <field name="X_RAY">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList">
+          <field name="FIELDNAME">Rect block</field>
+        </shadow>
+        <block type="allObjectList" id="ms-0JSjCXJ|)VA~hsR9b"/>
+      </value>
+      <statement name="DO_MOVE">
+        <block type="dragMove" id="1pga|-h=CvAP(b(7I$XC">
+          <field name="MODE">XYZ</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList">
+              <field name="FIELDNAME">Rect block</field>
+            </shadow>
+            <block type="allObjectList" id="%ew(HnQ#}E*XR9CBnBwB"/>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="oiToT}bKoUX**pmsRm+L" x="-1727" y="-141">
+      <field name="VAR" id="Z]|IZUma8Mo~2;~4L7:i">newpiece</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_for" id="5^kErR:yOPcf|u~]HIxo" x="-430" y="-150">
+      <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+      <value name="FROM">
+        <shadow type="math_number" id="667xxFakd/]x{?a{A~i(">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number" id="[!RF;Wv?8Yw|u}4s8vHh">
+          <field name="NUM">9</field>
+        </shadow>
+      </value>
+      <value name="BY">
+        <shadow type="math_number" id="ccsB/V@$KrE+%@r]FX.?">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="controls_ifelse" id="IW2Ow0@@HaUq2YkwL87m">
+          <value name="IF0">
+            <block type="logic_compare" id="/kX94Op#aJt+3}cMZm}E">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="hJGE5(b!@Lf_scuQFyH^">
+                  <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number" id="iwOLno=!y)wrKK%BIt:`">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_for" id="v7ehEnb1X=`3l7-XHuH*">
+              <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+              <value name="FROM">
+                <shadow type="math_number" id="Snu~oYlw$7@$?NAJ)x{#">
+                  <field name="NUM">2</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="DdY+ZUPAev)0a6reU[K2">
+                  <field name="NUM">9</field>
+                </shadow>
+              </value>
+              <value name="BY">
+                <shadow type="math_number" id="63(N~i].!8bJu,_e`zfL">
+                  <field name="NUM">-1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="controls_ifelse" id="mLit.mNjgB_WW7^{m.{!">
+                  <value name="IF0">
+                    <block type="logic_compare" id="Q6y0LqZgx/pg04|+|K%e">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="math_modulo" id="CkHn}y/3^V-.57J5Xj]5">
+                          <value name="DIVIDEND">
+                            <shadow type="math_number" id="dv2X%g/2[CbP-x3XnMS}">
+                              <field name="NUM">8</field>
+                            </shadow>
+                            <block type="variables_get" id="[lC@yi#IT!o1V3O#y53(">
+                              <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                            </block>
+                          </value>
+                          <value name="DIVISOR">
+                            <shadow type="math_number" id="U3*8?(}+BE%|h9Y|Ucdx">
+                              <field name="NUM">2</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" id="r2YBJ4n0L}05flbh:6pF">
+                          <field name="NUM">0</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="setObjTransform" id="-W{V*~$-w$xe=N^NJVS+">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                      <field name="MODE">position</field>
+                      <field name="OFFSET">FALSE</field>
+                      <value name="TARGETOBJ">
+                        <shadow type="objectList" id="2{~d|SnI/2onDB+5W6cY">
+                          <field name="FIELDNAME">Building plane.001</field>
+                        </shadow>
+                        <block type="cloneObject" id="^cOLRs}`WvB[:!:TYtkO">
+                          <value name="OBJECTINPUT">
+                            <shadow type="objectList" id="SrWbt07nO}CiY*JC%/lO">
+                              <field name="FIELDNAME">Building plane.001</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="X">
+                        <block type="math_arithmetic" id="va)V9rf-_N7fGEe#4Q9A">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number" id="~3^[jyLG+BZ:?js(*YH$">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="Pd2ndms1)gHXpLl{2E=^">
+                              <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="aK*}n~Fo=3dl,T]H6X#5">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_arithmetic" id="ZuZ9BchWOX%};-F!$C9!">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number" id="PBe0l^PLVSP,Y3$lCaR]">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="+sx;JeU}m5.1FuoNLPeT">
+                              <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="Dd]aJz0.g61`a**^.)%c">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="setObjTransform" id="|En4ZoG(+D5Ng%,!5c_T">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                      <field name="MODE">position</field>
+                      <field name="OFFSET">FALSE</field>
+                      <value name="TARGETOBJ">
+                        <shadow type="objectList">
+                          <field name="FIELDNAME">Building plane.001</field>
+                        </shadow>
+                        <block type="cloneObject" id="/k9,NMSkpOa@(h+5pfZ4">
+                          <value name="OBJECTINPUT">
+                            <shadow type="objectList" id="]iyoA$0a_5OK9p?hURDD">
+                              <field name="FIELDNAME">Building plane.002</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="X">
+                        <block type="math_arithmetic" id="jhm[tg*0/!D+0O:^X:}q">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id="Uo+*^_oTXY2c5QGSgn!T">
+                              <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="|rcHhkDq*S`2;rMRJ+~2">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_arithmetic" id="buP!s=17;~8Mn*~]Uo4)">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="variables_get" id=";A,s*Wl%Q/aw7IL5KzAT">
+                              <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="P2*bELO0@=1:O/u3qWK,">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="controls_ifelse" id="zU7kYmKnEE{oH]1[NdX0">
+              <value name="IF0">
+                <block type="logic_compare" id=")s[Dq*qNr2+1zEVYSQ~i">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="math_modulo" id="UyEBz~1L#p|]]g-q+zq:">
+                      <value name="DIVIDEND">
+                        <shadow type="math_number">
+                          <field name="NUM">8</field>
+                        </shadow>
+                        <block type="variables_get" id="rT#,1ww?PL.!`0+9V8f;">
+                          <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                        </block>
+                      </value>
+                      <value name="DIVISOR">
+                        <shadow type="math_number" id="S7*/;0{o0-mrH3rH/FTW">
+                          <field name="NUM">2</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="DG9TgDj5}5_cMI,znv^?">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="controls_for" id="._OeHAYd{.n.z#@gmLwv">
+                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                  <value name="FROM">
+                    <shadow type="math_number" id="*F3XYzOug_pf(~rDs(4i">
+                      <field name="NUM">2</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id=",}lv08kjNn_lG7jG!b}l">
+                      <field name="NUM">9</field>
+                    </shadow>
+                  </value>
+                  <value name="BY">
+                    <shadow type="math_number" id="PsuNiOfw2w@y(ZW%KhN9">
+                      <field name="NUM">-1</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_ifelse" id="at[2R{U)`g!Zu_W;G^}a">
+                      <value name="IF0">
+                        <block type="logic_compare" id="kZd`^uA?Uwak[EGp`6Bb">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="math_modulo" id="xQ^vAGdbZ-n%}SR#CHX/">
+                              <value name="DIVIDEND">
+                                <shadow type="math_number">
+                                  <field name="NUM">8</field>
+                                </shadow>
+                                <block type="variables_get" id="Tz7+~O~*TK1=Z*oH1d4t">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="DIVISOR">
+                                <shadow type="math_number" id="ZA#86UFjK0;09C-#3/Yj">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" id="[)s{hz{qA9;/;v3z8(wq">
+                              <field name="NUM">0</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="setObjTransform" id=")sKl.wBQmW+_:s-j{)a3">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                          <field name="MODE">position</field>
+                          <field name="OFFSET">FALSE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList">
+                              <field name="FIELDNAME">Building plane.001</field>
+                            </shadow>
+                            <block type="cloneObject" id="3gvza)BD/*~A[fI16s.D">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList" id="cz2+[DZDkJ3ZBB073994">
+                                  <field name="FIELDNAME">Building plane.001</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="X">
+                            <block type="math_arithmetic" id="MzsveXfnnf^maC#C7FWu">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="B[M8b~v!or%;(;!YjGIg">
+                                  <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="}bKE4_qLa*^,{i)OI?v3">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <block type="math_arithmetic" id="qw@XXL]13G{_0%C0fNRG">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="!fZ`NPn~((gNl1O.h=-Z">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="NS|S.OtGtS0r$:`lqhM@">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="setObjTransform" id="I4BOlj_tL0arqp7oMgjt">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                          <field name="MODE">position</field>
+                          <field name="OFFSET">FALSE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList">
+                              <field name="FIELDNAME">Building plane.001</field>
+                            </shadow>
+                            <block type="cloneObject" id="IUCw{C}bu[uCX2v]s0Hg">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList" id="S@k}PD3Gw$D5?L@OvknF">
+                                  <field name="FIELDNAME">Building plane.002</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="X">
+                            <block type="math_arithmetic" id="O1z}OqStY57p77d}.{9j">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="M*xVVUEE%.q#6CFCER:6">
+                                  <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="F~*Q3`Xp~rz;W^hgr6wL">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <block type="math_arithmetic" id="cK;-85O=46jLsS|5[-OZ">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="Xn-96=Y3yHW+HR#K/P1x">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="FXX{AO`+R`h$`oFXJTp!">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="controls_for" id="h[*.[lJK?mq`sCNvq5wj">
+                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                  <value name="FROM">
+                    <shadow type="math_number" id="lW9d2%LKv5;:C|D*SfM9">
+                      <field name="NUM">2</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="$@q3cs_1JzUPZ;W/;AEe">
+                      <field name="NUM">9</field>
+                    </shadow>
+                  </value>
+                  <value name="BY">
+                    <shadow type="math_number" id="#yMPJ`T#r/RLdB|x6HWZ">
+                      <field name="NUM">-1</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_ifelse" id="A`p?yD(MHF1Rd[`j?I2v">
+                      <value name="IF0">
+                        <block type="logic_compare" id="TBdvf5==GE}J58uEv%3(">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="math_modulo" id="GdgI=C3B;14E$~51}@w|">
+                              <value name="DIVIDEND">
+                                <shadow type="math_number">
+                                  <field name="NUM">8</field>
+                                </shadow>
+                                <block type="variables_get" id="t0#Ax;fohc?|?O]$A}gi">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="DIVISOR">
+                                <shadow type="math_number" id="*!wC-+?H0Lza+(8vx/bL">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" id="S+j8C8c%8j}sYw@wO5[Z">
+                              <field name="NUM">0</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="setObjTransform" id="`h`BwrM-bJVZlyl0F9]t">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                          <field name="MODE">position</field>
+                          <field name="OFFSET">FALSE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList">
+                              <field name="FIELDNAME">Building plane.001</field>
+                            </shadow>
+                            <block type="cloneObject" id="otl|$|$:/iv[`Gr.|X!6">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList" id="M%{NbLB`TOovUzVAw}T$">
+                                  <field name="FIELDNAME">Building plane.002</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="X">
+                            <block type="math_arithmetic" id="T$4GL58(19Drgx^?O68A">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id=":}4gJ?.{wMsFJjXh~=g/">
+                                  <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="4HZA+N)5Vs(e/)p4sp[9">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <block type="math_arithmetic" id=":%cJI5J=EQN4ASAbj$E6">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="0l3M,oREzPlmi_E66]8]">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="m%6$z=^],;mHBEF(EF!j">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="setObjTransform" id="%Jl:-na8%C1;E=opT`ax">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                          <field name="MODE">position</field>
+                          <field name="OFFSET">FALSE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList">
+                              <field name="FIELDNAME">Building plane.001</field>
+                            </shadow>
+                            <block type="cloneObject" id="(#.`s`K*3K?`?[|TwnMD">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList" id="JrHY_k?q1FX~yPV6rq5{">
+                                  <field name="FIELDNAME">Building plane.001</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="X">
+                            <block type="math_arithmetic" id="3W:ro0EvkK:1Ndd0n]4@">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="C@NYozu=Jg+z_ZAV[CaV">
+                                  <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="fRE@5%$(3X^H99V2@n9D">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <block type="math_arithmetic" id="X=%4]T8z@+JHLg6a7M)I">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="[QDjqn]-LDOGMO+e+hbi">
+                                  <field name="VAR" id="Qpk{!(%rMClnVkBaE(57">j</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="v!/-*k/_mQU$53Ymi!!c">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="9nIplR%yuy:xx[kACHNO" x="-254" y="86">
+      <field name="VAR" id="}5_M]g.OtiKy8QXR`,m,">i</field>
+    </block>
+  </tab>
+  <editorsettings viewport-x="880.4001098632812" viewport-y="176.79996490478516" viewport-w="614.4" viewport-h="347.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
